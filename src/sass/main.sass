@@ -116,28 +116,54 @@ footer
 	.photo_box
 		display: flex
 		.main_photo
-			width: 480px
-			height: 480px
-			padding: 74px 50px
+			max-width: 480px
+			max-height: 480px
+			width: calc( 100% - 23.2355% )
+			padding: 15.41% 10.42%
 			background: #FFFFFF
 			border: 1px solid #E9E9E9
 			box-sizing: border-box
 			border-radius: 25px
-
-	.text_box
-		padding-top: 63px
-		h1
-			font-family: $text-font
-			font-size: 36px
-			line-height: 1
-			margin-bottom: 24px
-		p
-			font-size: 16px
-			line-height: 2
-			margin-bottom: 2em
-		.text_box--price
+			img
+				max-width: 100%
+	.thumb_photos
+		width: 23.2355%
+		margin-left: 15px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.thumb_item
+			background: #FFFFFF
+			border: 1px solid #E9E9E9
+			box-sizing: border-box
+			border-radius: 25px
+			padding: 20% 16.66%
 			display: flex
-			justify-content: space-between
+			justify-content: center
+			align-items: center
+			img
+				max-width: 100%
+    .text_box
+      padding-top: 63px
+
+.text_box
+  h1
+    font-family: $text-font
+    font-size: 36px
+    line-height: 1
+    margin-bottom: 24px
+  h3
+    font-family: $text-font
+    font-weight: bold
+    font-size: 36px
+    margin-bottom: 52px
+  p
+    font-size: 16px
+    line-height: 2
+    margin-bottom: 2em
+  .text_box--price
+    display: flex
+    justify-content: space-between
 .price
 	color: #64BC2A
 	font-family: $text-font
@@ -146,11 +172,17 @@ footer
 	line-height: 1
 	.curr
 		color: #3E3F43
+	sup
+		font-size: 14px
+		color: rgba(62,63,67,.5)
+		text-decoration-line: line-through
+		top: -20px
+		position: relative
 .btn
 	width: 182px
 	height: 52px
 	background: #64BC2A
-	font-family: Raleway
+	font-family: $text3
 	font-weight: bold
 	font-size: 18px
 	line-height: 52px
@@ -158,6 +190,48 @@ footer
 	border-radius: 26px
 	text-align: center
 
+.tab_links
+	display: flex
+	li
+    &+li
+      margin-left: 8px
+    a
+      font-family: $text-font
+      font-weight: 500
+      padding: 15px 36px
+      font-size: 18px
+      line-height: 1
+      color: #9B9B9E
+      background: #F8F8F8;
+      border: 1px solid #E9E9E9
+      border-bottom: none
+      box-sizing: border-box;
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+      &.active
+        background: #ffffff
+        color: #64bc2a
+        position: relative
+        &::after
+          content: ""
+          position: absolute
+          bottom: -2px
+          width: calc( 100% - 2px)
+          height: 2px
+          background: #ffffff
+          left: 1px
+
+.tabs_item
+  display: none
+  border: 1px solid #E9E9E9
+  background: #ffffff
+  padding: 58px 58px 60px
+  &.active
+    display: block
+    
+
+.prod_desc
+  margin-bottom: 46px
 
 
 @import "media" // Always at the end
