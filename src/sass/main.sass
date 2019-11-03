@@ -38,12 +38,81 @@ ul
 		width: 100%
 
 
+.title
+  font-family: $text-font
+  font-weight: bold
+  font-size: 36px
+  line-height: 44px
+  text-align: center
+  color: #3E3F43
+.subtitle
+  font-family: $text3
+  font-size: 18px
+  line-height: 21px
+  text-align: center
+  display: block
+
 header
 	min-height: 156px
 .header_top
 	display: flex
 	align-items: center
 	height: 84px
+
+.top_right
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    height: 100%
+    .top_social
+        display: flex
+        align-items: center
+        .social
+            a
+                width: 16px
+                height: 16px
+                img
+                    max-width: 100%
+                    height: 16px
+            a + a
+                margin-left: 18px
+        span.devider
+            margin: 0 25px
+            width: 1px
+            height: 34px
+            background: #C4C4C4
+        .phone a
+            color: #3E3F43
+            font-weight: 500
+            font-family: $text-font
+            &::before
+                content: ""
+                background: url('../img/icon-phone.svg') no-repeat
+                display: inline-block
+                vertical-align: middle
+                margin-right: 7px
+                width: 10px
+                height: 12px
+                background-size: contain
+    .top_basket
+        margin-right: 0
+        margin-left: 99px
+        a.basket
+            position: relative
+            span
+                position: absolute
+                font-size: 12px
+                font-weight: bold
+                color: #ffffff                
+                background: #64BC2A
+                border-radius: 2px
+                padding-left: 6px
+                padding-right: 3px
+                top: -3px
+                left: 10px
+            &:hover
+                text-decoration: none
+
 	
 nav.header_nav
 	background-color: #24324A
@@ -111,40 +180,42 @@ footer
 	background-color: #24324A
 
 .product_wrap
-	.prod_top
-		margin-bottom: 142px
-	.photo_box
-		display: flex
-		.main_photo
-			max-width: 480px
-			max-height: 480px
-			width: calc( 100% - 23.2355% )
-			padding: 15.41% 10.42%
-			background: #FFFFFF
-			border: 1px solid #E9E9E9
-			box-sizing: border-box
-			border-radius: 25px
-			img
-				max-width: 100%
-	.thumb_photos
-		width: 23.2355%
-		margin-left: 15px
-		display: flex
-		flex-direction: column
-		justify-content: space-between
-		.thumb_item
-			background: #FFFFFF
-			border: 1px solid #E9E9E9
-			box-sizing: border-box
-			border-radius: 25px
-			padding: 20% 16.66%
-			display: flex
-			justify-content: center
-			align-items: center
-			img
-				max-width: 100%
+    background: url('../img/decor.svg') no-repeat  right 65px
+    .prod_top
+        margin-bottom: 142px
     .text_box
-      padding-top: 63px
+        padding-top: 63px
+    .photo_box
+        display: flex
+        .main_photo
+            max-width: 480px
+            max-height: 480px
+            width: calc( 100% - 23.2355% )
+            padding: 15.41% 10.42%
+            background: #FFFFFF
+            border: 1px solid #E9E9E9
+            box-sizing: border-box
+            border-radius: 25px
+            img
+                max-width: 100%
+    .thumb_photos
+        width: 23.2355%
+        margin-left: 15px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .thumb_item
+            background: #FFFFFF
+            border: 1px solid #E9E9E9
+            box-sizing: border-box
+            border-radius: 25px
+            padding: 20% 16.66%
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                max-width: 100%
+  
 
 .text_box
   h1
@@ -179,16 +250,23 @@ footer
 		top: -20px
 		position: relative
 .btn
-	width: 182px
-	height: 52px
-	background: #64BC2A
-	font-family: $text3
-	font-weight: bold
-	font-size: 18px
-	line-height: 52px
-	color: #ffffff
-	border-radius: 26px
-	text-align: center
+    text-align: center
+    width: 182px
+    height: 52px
+    background: #64BC2A
+    font-family: $text3
+    font-weight: bold
+    font-size: 18px
+    line-height: 52px
+    color: #ffffff
+    border-radius: 26px
+    border: 1px solid transparent
+
+.btn:hover
+    background: transparent
+    border-color: #64BC2A
+    color: #64BC2A
+    text-decoration: #64BC2A
 
 .tab_links
 	display: flex
@@ -232,6 +310,142 @@ footer
 
 .prod_desc
   margin-bottom: 46px
+
+
+
+.consultation
+  text-align: center
+  padding-bottom: 106px
+  padding-top: 46px
+  background: url('../img/element.svg') no-repeat top center
+  .title
+    margin-bottom: 31px
+  small
+    margin-bottom: 50px
+  .btn
+    font-size: 18px
+    font-weight: 700
+    padding: 17px 42px
+
+
+footer
+  padding-top: 65px
+  color: #A4BDDE
+  font-size: 16px
+  font-weight: 500
+  .f_top
+    margin-bottom: 58px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .f_top--logo
+      &>a
+        display: block
+        margin-bottom: 26px
+    .slogan
+      font-family: $text3
+      line-height: 1.5
+      display: block
+      margin-bottom: 38px
+    .f_top--social
+      display: flex
+      a
+        & + a
+          margin-left: 18px
+    .f_top--menu
+      padding-top: 7px
+      margin-left: 85px
+      display: flex
+      ul + ul
+        margin-left: 120px
+      li
+        margin: 11px 0 
+        a
+          color: #A4BDDE
+          font-family: $text3
+          font-weight: 500
+          font-size: 18px
+    .f_top--cards
+      padding-top: 18px
+      .cards_wrap
+        border: 1px solid #A4BDDE
+        border-radius: 10px
+        width: 294px
+        height: 92px
+        position: relative
+        margin-left: 93px
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        span
+          position: absolute
+          &.f_top--visa__top
+            background: #24324A
+            padding: 0 7px
+            top: -8px
+            left: 36px
+            font-family: $text-font
+            font-size: 14px
+            line-height: 17px
+            color: #A4BDDE;
+          &.f_top--visa__btn
+            padding: 0 7px
+            font-size: 14px
+            line-height: 0.8
+            background: #24324a
+            bottom: -18px
+            left: 34px
+            
+            small
+              background: #4A5C76
+              border-radius: 18px
+              padding: 0 10px 0 23px
+              height: 36px
+              width: 232px                
+              display: flex
+              justify-content: center
+              align-items: center
+
+    .f_top--feedback
+      text-align: right
+      span
+        font-weight: 700
+        font-size: 22px
+        display: block
+        line-height: 1
+        margin-bottom: 15px
+      small
+        display: block
+        margin-bottom: 27px
+        font-size: 18px
+        line-height: 1
+      a.btn
+        background: transparent
+        color: #A4BDDE
+        font-size: 18px
+        padding: 11px 50px
+        border: 1px solid #A4BDDE
+        border-radius: 20px
+
+
+  .f_bottom
+    border-top: 1px solid rgba(164,189,222,.7)
+    padding: 36px 0
+    display: flex
+    justify-content: space-between
+    color: #A4BDDE
+    font-family: $text-font
+    font-weight: 500;
+    font-size: 14px
+    line-height: 17px
+    a
+      color: #A4BDDE
+
+    .copyright
+    .f_bottom--links
+      span
+        margin: 0 36px
+
 
 
 @import "media" // Always at the end
