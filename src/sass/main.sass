@@ -68,12 +68,17 @@ ul
   &.inner_title
     text-align: left
     margin-bottom: 64px
-.subtitle
+  &.title_left
+    text-align: left
+
+.consultation .subtitle
   font-family: $text3
   font-size: 18px
   line-height: 21px
   text-align: center
   display: block
+  margin-left: auto
+  margin-right: auto
 
 header
 	min-height: 156px
@@ -426,15 +431,14 @@ footer
     justify-content: center
     img
       max-width: 100%
-    .sales
-      padding-bottom: 4px
+    .sales, .new
+      padding-bottom: 13px
       width: 64px
-      height: 41px
+      height: 50px
       position: absolute
       top: 0
       right: 0
       z-index: 2
-      background: url('../img/discount_label.png') no-repeat
       font-family: $default-font
       font-weight: bold
       font-size: 16px
@@ -442,6 +446,10 @@ footer
       display: flex
       align-items: center
       justify-content: center
+    .sales
+      background: url('../img/discount_label.png') no-repeat
+    .new
+      background: url('../img/new_label.png') no-repeat
   .prod_card--desc
     .name
       height: 44px
@@ -451,6 +459,14 @@ footer
       font-weight: 500;
       font-size: 22px;
       line-height: 1
+    .desc
+      margin-bottom: 22px
+      text-align: center
+      font-family: $text3
+      font-size: 18px
+      line-height: 1
+      color: #3E3F43
+      opacity: 0.5
     .price
       font-weight: 500;
       font-size: 36px
@@ -466,7 +482,71 @@ footer
       margin-bottom: 50px;
       margin-left: auto;
       margin-right: auto;
-    
+  
+  &.catalog_card
+    position: relative
+    height: 100%
+    margin-bottom: 0
+    .prod_card--img
+      height: 336px
+      margin-bottom: 22px
+    .prod_card--desc
+      .name
+        height: auto
+    .prod_card--fulldesc
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      background: #ffffff
+    &:hover
+      .prod_card--fulldesc
+        display: block
+      .prod_card--desc
+        .price
+          color: #64BC2A
+
+.prod_card--fulldesc
+  padding: 48px 25px 40px 45px
+  border-radius: 25px
+  text-align: left
+  .name
+    font-family: $text-font
+    font-weight: bold
+    font-size: 22px
+    line-height: 100%
+    color: #3E3F43
+    margin-bottom: 19px
+
+  .subname
+    margin-bottom: 26px
+    font-family: $text-font
+    font-weight: 500
+    font-size: 22px
+    line-height: 100%
+    color: #3E3F43
+    margin-bottom: 19px
+  p
+  .fulldesc_row
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid #3E3F43
+    padding-bottom: 3px
+    & + .fulldesc_row
+      margin-top: 14px
+    span
+      font-size: 16px
+      font-family: $text-font
+      color: #3E3F43
+      &:last-child
+        font-weight: bold
+      strong
+        color: #64BC2A
+
+  
+.catalog_item--wrap
+  margin-bottom: 51px
+  
 .gallery_slider
   margin-bottom: 63px
   .gallery_item
@@ -972,19 +1052,7 @@ footer
 
 
 //=============== ONLINE STORE PAGE ===================
-.store_wrap
-  .title
-    text-align: left
-  small
-    display: block
-    font-family: $text3
-    font-size: 18px
-    line-height: 150%
-    color: #3E3F43
-    max-width: 760px
-    margin-top: 18px
-    margin-bottom: 58px
-    opacity: 0.7
+.store_wrap  
 
   .store_item
     margin-bottom: 64px
@@ -1009,6 +1077,19 @@ footer
       display: block
     &:hover
       text-decoration: none
+
+small.subtitle
+  display: block
+  font-family: $text3
+  font-size: 18px
+  line-height: 150%
+  color: #3E3F43
+  max-width: 760px
+  margin-top: 18px
+  margin-bottom: 58px
+  opacity: 0.7
+  text-align: left
+
 
 .back_link
   font-family: $default-font
