@@ -404,9 +404,10 @@ footer
     text-align: left
 
  
-//slider
-.prod_slider
+//slider\
+.slider_wrap
   margin: 58px -18px 138px
+.prod_slider
   .prod_card
     margin: 0 18px
 .prod_card
@@ -465,6 +466,42 @@ footer
       margin-left: auto;
       margin-right: auto;
     
+.gallery_slider
+  margin-bottom: 63px
+  .gallery_item
+    margin: 0 18px
+    padding-bottom: 75px
+    a
+      display: block
+      position: relative       
+    a:focus
+      outline: none
+
+.shadow-img
+  display: inline-block
+  position: relative
+  &.big-img
+    width: 
+    &::after
+      width: 452px
+      height: 264px
+      top: 35%
+      filter: blur(70px)
+  &::after
+    content: ""
+    max-width: 84.32%
+    max-height: 73.53%
+    width: 354px
+    height: 260px
+    filter: blur(30px)
+    background: url('../img/img-shadow.png') center  no-repeat
+    background-size: contain
+    display: block
+    top: 35%
+    position: absolute
+    z-index: -1
+    left: 50%
+    transform: translateX(-50%)
 
 .slick-arrow
   font-size: 0
@@ -486,6 +523,58 @@ footer
     outline: none
     opacity: .5
 
+.about_wrap
+  position: relative
+  &::before
+    content: ""
+    background: url(../img/decor.svg) no-repeat
+    background-size: contain 
+    transform: rotate(180deg) translateY(60%)
+    width: 335px
+    height: 650px
+    position: absolute
+    left: 0
+    top: 50%
+
+.text
+  margin-bottom: 92px
+  p
+    font-family: $text3
+    font-size: 18px
+    line-height: 150%
+    color: #3E3F43
+    & + .text_row
+      margin-top: 92px
+  h2
+    font-family: $text-font
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 100%
+    margin-bottom: 22px
+
+.text_row
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-bottom: 68px
+  .data-img
+    max-width: 689px
+    width: 47.50%
+  div.data-text
+    width: 52.5%
+    padding-top: 32px
+    h1
+      font-family: $text-font
+      font-style: normal
+      font-weight: bold
+      font-size: 36px
+      line-height: 100%
+      margin-bottom: 22px
+
+  &.text_row--inverse
+    .shadow-img
+      text-align: right
 
 //POPUPS
 .popup_add

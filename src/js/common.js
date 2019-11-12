@@ -57,4 +57,26 @@ $(function() {
 			}
 		  ]
 	})
+
+	$('.gallery_slider').slick({
+		slidesToShow: 3,
+		dots: false,
+		arrows: true,
+		responsive: [
+			{
+			  breakpoint: 991,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			  }
+			},
+			{
+			  breakpoint: 564,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+		  ]
+	})
 });

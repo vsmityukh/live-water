@@ -5,6 +5,15 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+    .text_row
+        &>div.data-text, div.data-img
+            width: 100%
+        div.data-img
+            text-align: center
+            max-width: 100%
+        &.text_row--inverse
+            div.data-img
+                order: -1   
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -75,8 +84,26 @@
         padding: 22px 0
 // ≥768px
 +media-breakpoint-down(sm)
+    .gallery_slider
+        margin-bottom: 0
+    .title
+        font-size: 22px
+    .text p+.text_row
+        margin-bottom: 36px
+    .text
+        margin-bottom: 36px
+    .text_row
+        margin-bottom: 36px
+
+    .text p
+        font-size: 12px
+    .text_row div.data-text h1, .text_row div.data-text h2
+        font-size: 22px
+
     .crumbs ul li a,.crumbs ul li span
         font-size: 12px
+
+    
     
 
     footer
