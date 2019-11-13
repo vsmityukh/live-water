@@ -79,4 +79,10 @@ $(function() {
 			}
 		  ]
 	})
+
+	$('.topSlider').slick({
+		slidesToShow: 1,
+		dots: true,
+		arrows: true
+	})
 });

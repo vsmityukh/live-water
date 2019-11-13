@@ -401,7 +401,8 @@ footer
   .btn
     font-size: 18px
     font-weight: 700
-    padding: 17px 42px
+    line-height: 52px
+    display: inline-block
 
 
 .more_prod
@@ -1180,6 +1181,160 @@ small.subtitle
         color: #ffffff
         text-decoration: none
     
+
+// ============ BLOG PAGE ==============
+.topSlider
+  color: #fff
+  .topSlider_item
+    padding-top: 87px
+    height: 506px
+    background-size: cover
+    background-repeat: no-repeat
+    h2
+      font-family: $text-font
+      font-weight: bold
+      font-size: 36px
+      color: #ffffff
+      text-align: left
+      margin-bottom: 24px
+    p
+      max-width: 760px
+      font-family: $text3
+      font-size: 18px
+      line-height: 1.5
+    a
+      width: 216px
+      height: 40px
+      line-height: 40px
+      display: block
+      margin: 37px 0 34px
+    .topSlider_item--bottom
+      span
+        font-family: $default-font
+        font-weight: 300
+        font-size: 22px
+        line-height: 1.5
+        vertical-align: middle
+        &::before
+          content: ""
+          position: relative
+          top: 3px
+          width: 22px
+          height: 22px
+          display: inline-block
+          margin-right: 14px
+        &.date_added::before
+          background: url('../img/icon-date.svg') no-repeat
+        &.view_count::before
+          background: url('../img/icon-view.svg') no-repeat 
+        & + span
+          margin-left: 36px
+
+  .slick-arrow
+    top: 50%
+    transform: translateY(-50%)
+    width: 19px
+    height: 34px
+    padding: 0
+    z-index: 1
+    &.slick-prev
+      background: url('../img/topslider-prev.svg') center no-repeat
+      left: 92px
+      right: initial
+    &.slick-next
+      background: url('../img/topslider-next.svg') center no-repeat
+      right: 92px
+  .slick-dots
+    display: flex
+    justify-content: center
+    position: absolute
+    bottom: 36px
+    text-align: center
+    left: 50%
+    transform: translateX(-50%)
+    button
+      font-size: 0
+      border: none
+      background: none
+      display: none
+    li
+      width: 10px;
+      height: 10px;
+      border-radius: 50%
+      border: 1px solid #FFFFFF
+      background: transparent
+      margin: 0 7px
+      cursor: pointer
+      &.slick-active
+        background: #fff
+      &:hover
+        background: rgba(255, 255, 255, 0.5)
+
+.article_item
+  background-position: center top
+  background-size: contain
+  background-repeat: no-repeat
+  height: 322px
+  width: 100%
+  max-width: 468px
+  margin-bottom: 83px
+  padding: 28px 46px 0
+  color: #fff
+  &:hover
+    text-decoration: none
+    color: #fff
+
+  .article_item--name
+    font-family: $text-font
+    font-weight: bold
+    font-size: 28px
+    line-height: 1
+  p
+    margin: 16px 0 16px
+    font-family: $text3
+    font-weight: 300
+    font-size: 18px
+    line-height: 1.2
+  .article_item--bottom
+    padding-top: 21px
+    border-top: 1px solid #FFFFFF
+    span
+      font-family: $default-font
+      font-weight: 300
+      font-size: 14px
+      &::before
+        content: ""
+        position: relative
+        top: 3px
+        width: 12px
+        height: 13px
+        display: inline-block
+        margin-right: 6px
+      &.date_added::before
+        background: url('../img/icon-date.svg') no-repeat
+        background-size: contain
+      &.view_count::before
+        background: url('../img/icon-view.svg') no-repeat 
+        background-size: contain
+      & + span
+        margin-left: 22px
+
+.subscribe_from
+  input
+    height: 52px
+    width: 411px
+    background: #FFFFFF
+    border: 1px solid #E9E9E9
+    border-radius: 10px
+    padding: 0 11px 0 48px  
+    margin-right: 18px
+  input, input::placeholder
+    color: #AEAEAE
+    font-size: 16px
+    font-family: $default-font
+
+input.input-email
+    background: #fff url('../img/icon-mail.svg') no-repeat 19px 19px
 
 
 @media (max-width: 1440px)
