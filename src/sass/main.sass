@@ -1355,13 +1355,13 @@ input.input-email
 article
   position: relative
   &::before
-    content: "";
-    background: url(../img/decor.svg) no-repeat;
-    background-size: contain;
-    transform: rotate(180deg);
-    width: 335px;
-    height: 650px;
-    position: absolute;
+    content: ""
+    background: url(../img/decor.svg) no-repeat
+    background-size: contain
+    transform: rotate(180deg)
+    width: 335px
+    height: 650px
+    position: absolute
     left: 0
     top: 25px
   .text
@@ -1377,9 +1377,31 @@ article
         width: 40.5%
       div.data-text
         width: 59.5%
+  &.text_inner
+    &::before
+      transform: translateY(-50%)
+      left: initial
+      right: 0
+      top: 50% 
+    .text
+      p
+        line-height: 1.5
+        margin-bottom: 2em
+        & + h2
+          margin-bottom: 58px
+          font-size: 36px
+          font-weight: bold
+          font-family: $text-font
+          margin-bottom: 22px
+      h1
+        font-size: 36px
+        font-weight: bold
+        font-family: $text-font
+        margin-bottom: 22px
+
+
   
-
-
+  
 @media (max-width: 1440px)
   nav.header_nav ul li+li
     margin-left: 7%
