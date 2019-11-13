@@ -416,6 +416,9 @@ footer
 .prod_slider
   .prod_card
     margin: 0 18px
+.article_slider 
+  .article_item
+    margin: 0 9px
 .prod_card
   background: #FFFFFF;
   border: 1px solid #E9E9E9
@@ -1208,27 +1211,7 @@ small.subtitle
       line-height: 40px
       display: block
       margin: 37px 0 34px
-    .topSlider_item--bottom
-      span
-        font-family: $default-font
-        font-weight: 300
-        font-size: 22px
-        line-height: 1.5
-        vertical-align: middle
-        &::before
-          content: ""
-          position: relative
-          top: 3px
-          width: 22px
-          height: 22px
-          display: inline-block
-          margin-right: 14px
-        &.date_added::before
-          background: url('../img/icon-date.svg') no-repeat
-        &.view_count::before
-          background: url('../img/icon-view.svg') no-repeat 
-        & + span
-          margin-left: 36px
+
 
   .slick-arrow
     top: 50%
@@ -1270,6 +1253,37 @@ small.subtitle
       &:hover
         background: rgba(255, 255, 255, 0.5)
 
+.topSlider_item--bottom
+  span
+    font-family: $default-font
+    font-weight: 300
+    font-size: 22px
+    line-height: 1.5
+    vertical-align: middle
+    &::before
+      content: ""
+      position: relative
+      top: 3px
+      width: 22px
+      height: 22px
+      display: inline-block
+      margin-right: 14px
+    &.date_added::before
+      background: url('../img/icon-date.svg') no-repeat
+    &.view_count::before
+      background: url('../img/icon-view.svg') no-repeat 
+    & + span
+      margin-left: 36px
+
+article .topSlider_item--bottom
+  span
+    &.date_added::before
+      background: url('../img/date_icon-b.svg') no-repeat
+    &.view_count::before
+      top: 8px
+      background: url('../img/views_icon-b.svg') no-repeat 
+
+  
 .article_item
   background-position: center top
   background-size: contain
@@ -1335,6 +1349,35 @@ small.subtitle
 
 input.input-email
     background: #fff url('../img/icon-mail.svg') no-repeat 19px 19px
+
+
+//========= ARTICLE PAGE ============
+article
+  position: relative
+  &::before
+    content: "";
+    background: url(../img/decor.svg) no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+    width: 335px;
+    height: 650px;
+    position: absolute;
+    left: 0
+    top: 25px
+  .text
+    p
+      line-height: 2.5
+      margin-bottom: 2.5em
+    .text_row 
+      align-items: center
+      p
+        line-height: 1.5
+        margin-bottom: 26px
+      .data-img
+        width: 40.5%
+      div.data-text
+        width: 59.5%
+  
 
 
 @media (max-width: 1440px)
