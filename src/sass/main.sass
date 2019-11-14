@@ -1457,6 +1457,82 @@ article
     text-align: center
     color: #3E3F4350
   
+
+.contacts_wrap
+  margin-bottom: 122px
+  
+  .contacts_maps
+    &.shadow-img::after
+      width: 90%
+      max-width: 90%
+      max-height: 80%
+      height: 80%
+
+  .contacts_data
+    padding-top: 73px
+    padding-left: 3.86%
+    font-family: $text-font
+    font-weight: 500
+    font-size: 18px
+    line-height: 150%
+    color: #3E3F43
+    h1
+      margin-bottom: 32px
+
+  .contacts_phone
+    margin: 36px 0 22px
+    a
+      display: block
+      color: #3E3F43
+      position: relative
+      padding-left: 21px
+      margin-bottom: 5px
+      &::before
+        content: ""
+        background: url('../img/phone_icon.svg') no-repeat
+        width: 11px
+        height: 18px
+        position: absolute
+        left: 0
+        top: 4px
+
+
+  .contacts_mail
+    a
+      display: block
+      color: #3E3F43
+      padding-left: 20px
+      position: relative
+      &::before
+        content: ""
+        background: url('../img/icon-mail.svg') no-repeat
+        background-size: contain
+        width: 15px
+        height: 11px
+        position: absolute
+        left: -2px
+        top: 7px
+
+  .contacts_place
+    span
+      padding-left: 20px
+      position: relative
+      display: block
+      margin-bottom: 10px
+      &::before
+        content: ""
+        background: url('../img/place_icon.svg') no-repeat
+        width: 11px
+        height: 18px
+        position: absolute
+        left: 0
+        top: 4px
+
+  a.btn
+    display: inline-block
+    margin-top: 38px
+
+
 @media (max-width: 1440px)
   nav.header_nav ul li+li
     margin-left: 7%
@@ -1469,6 +1545,10 @@ article
     font-size: 28px
     span
       margin: 0 3px
+  
+  .contacts_wrap
+    .contacts_data
+      padding-top: 0
 
 @import "media" // Always at the end
 
