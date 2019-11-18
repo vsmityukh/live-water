@@ -323,18 +323,32 @@ footer
 		text-decoration-line: line-through
 		top: -20px
 		position: relative
+
+  
 .btn
-    text-align: center
-    width: 182px
-    height: 52px
-    background: #64BC2A
-    font-family: $text3
-    font-weight: bold
+  text-align: center
+  background: #64BC2A
+  font-family: $text3
+  font-weight: bold
+  font-size: 18px
+  color: #ffffff
+  border-radius: 26px
+  border: 1px solid transparent
+  padding: 17px 58px
+  &.btn-black-green
+    background: #0D6610
+    &:hover
+      background: #048508
+    &:focus
+      background: #066D0A
+  &.btn_transparent
+    background: transparent
+    border: 1px solid #64BC2A
+    color: #64BC2A
+    font-weight: normal
+    min-width: 192px
     font-size: 18px
-    line-height: 52px
-    color: #ffffff
-    border-radius: 26px
-    border: 1px solid transparent
+    font-family: $text3
 
 .btn:hover
   background: #56ca0a
@@ -1456,6 +1470,18 @@ article
     line-height: 2.5
     text-align: center
     color: #3E3F4350
+
+  .reviews_item--subname
+    font-family: $text3
+    margin-top: 12px
+    font-size: 14px
+    line-height: 1
+    color: #3E3F4370
+  .reviews_item--link
+    display: block
+    color: #3E3F43
+    font-weight: bold
+  
   
 
 .contacts_wrap
@@ -1532,6 +1558,241 @@ article
     display: inline-block
     margin-top: 38px
 
+
+
+// ============ MAIN PAGE STYLES =============
+
+.command_slider
+  margin: 0 -15px
+  .slick-track
+    padding-top: 110px
+  .reviews_item
+    margin: 0 15px
+
+.why_box
+  max-width: 246px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 74px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-family: $text-font
+  font-size: 18px
+  line-height: 22px
+  text-align: center
+  color: #3E3F43;
+  .why_box--img
+    height: 92px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 14px
+    border: 1px solid #ffffff
+    border-radius: 50%
+  p
+    font-weight: bold
+    margin: 21px 0 12px
+  small
+    font-weight: 600
+    font-family: $text3
+    font-size: 14px
+    opacity: .7
+
+
+a.btn.btn_center
+  display: block
+  width: 266px
+  margin: 67px auto 0
+  padding-left: 0
+  padding-right: 0
+
+
+a.download
+  font-family: $text-font
+  font-size: 18px
+  line-height: 1
+  color: #3E3F4380
+  text-decoration: none
+  vertical-align: middle
+  &:before
+    content: ""
+    background: url('../img/icon-download.svg') no-repeat
+    display: inline-block
+    margin-right: 14px
+    vertical-align: middle
+    position: relative
+    top: -4px
+    width: 21px
+    height: 29px
+    background-size: contain
+  &:hover
+    text-decoration: none
+
+
+.proposition_item
+  margin-bottom: 59px
+  p
+    margin: 0 0 22px
+    font-family: $text-font
+    font-weight: bold
+    font-size: 36px
+    line-height: 44px
+    color: #64BC2A
+  span
+    display: block
+    font-family: $text3
+    font-weight: 500
+    font-size: 18px
+    line-height: 21px
+    color: #3E3F43
+
+// main section's styles 
+section.main_section
+  padding: 91px 0 115px
+  &.green_box
+    background: #64BC2A
+    position: relative
+    overflow: hidden
+    &.article_list
+      &::after
+        content: ""
+        background: url(../img/element.svg) no-repeat top center;
+        position: absolute
+        bottom: -67px
+        right: 67px
+        display: block
+        width: 650px
+        height: 418px
+        opacity: .4
+    .consultation
+      position: relative
+      z-index: 1
+      padding-bottom: 0
+      padding-top: 0
+      background: none
+  &.command_box
+    .title
+      margin-bottom: 60px
+    .reviews_item
+      margin-bottom: 0
+  &.main_catalog
+    padding-top: 150px
+    .consultation
+      background: none
+      padding-top: 0
+      padding-bottom: 0
+      .title
+        text-align: center
+    .prod_card
+      background: transparent
+      border: none
+      .prod_card--img
+        height: 248px
+        margin-bottom: 33px
+      &:focus
+        outline: none
+  &.why_section
+    .title
+      margin-bottom: 55px
+
+  &.about_section
+    background: #fff
+    position: relative
+    &::before
+      content: ""
+      width: 0
+      height: 0
+      border-bottom: 96px solid #fff
+      border-right: 1920px solid transparent
+      position: absolute
+      top: -96px
+      left: 0
+    &::after
+      content: ""
+      width: 0
+      height: 0
+      border-top: 96px solid #fff
+      border-right: 1920px solid transparent
+      position: absolute
+      bottom: -96px
+      left: 0
+    .text
+      margin-bottom: 0
+    .text_row
+      display: flex
+      align-items: center
+      margin-bottom: 0
+    .data-text
+      padding-top: 0
+      padding-right: 100px
+
+    a.btn
+      display: block
+      min-width: 308px 
+      margin-top: 29px
+
+  &.main_screen
+    height: 718px
+    background-position: top right
+    background-repeat: no-repeat
+    background-size: 45%
+    .main_text
+      display: flex
+      flex-direction: column
+      max-width: 50%
+      padding-top: 56px
+      h1
+        font-size: 58px
+        line-height: 1
+      small
+        display: block
+        font-family: $text3
+        font-weight: normal
+        font-size: 22px
+        line-height: 1
+        color: #3E3F4380
+        margin: 28px 0 39px
+
+      a
+        line-height: 1
+        &.btn
+          max-width: 308px
+          margin: 7.5px 0
+        &.download
+          display: block
+          margin-top: 24px
+
+
+  &.howWork_section
+    position: relative
+    overflow: visible
+    &::before
+      content: ""
+      width: 0
+      height: 0
+      border-bottom: 96px solid #64BC2A
+      border-right: 1920px solid transparent
+      position: absolute
+      top: -96px
+      left: 0
+    &::after
+      content: ""
+      width: 0
+      height: 0
+      border-top: 96px solid #64BC2A
+      border-right: 1920px solid transparent
+      position: absolute
+      bottom: -96px
+      left: 0
+
+  &.proposition
+    padding-top: 150px
+    .text
+      margin-bottom: 0
+    .text_row
+      margin-top: 65px
 
 @media (max-width: 1440px)
   nav.header_nav ul li+li
