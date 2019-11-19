@@ -415,7 +415,7 @@ footer
   .btn
     font-size: 18px
     font-weight: 700
-    line-height: 52px
+    line-height: 1
     display: inline-block
 
 
@@ -1648,6 +1648,65 @@ a.download
     line-height: 21px
     color: #3E3F43
 
+.steps_wrap
+  margin-top: 123px
+  margin-bottom: 144px
+  .step_item
+    width: 411px
+    margin: 0 auto
+    text-align: center
+    padding-bottom: 29px
+    position: relative
+    &.step_item_top
+      &::before
+        margin-left: -1px
+        bottom: -79px
+      &::after
+        margin-left: -10px
+        bottom: -111px
+    &.step_item_bottom
+      margin-top: 380px
+      &::before
+        margin-left: -1px
+        top: -79px
+      &::after
+        margin-left: -10px
+        top: -111px
+    &::before
+      content: ""
+      position: absolute
+      width: 2px
+      height: 79px
+      border: 2px dashed #FFFFFF50
+      left: 50%
+      
+    &::after
+      content: ""
+      background: url('../img/icon-point.svg') no-repeat
+      width: 22px
+      height: 22px
+      display: inline-block
+      position: absolute
+      left: 50%
+      
+    p
+      margin: 20px 0 5px
+      font-family: $text-font
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px
+      text-transform: uppercase
+      color: #3E3F43
+    small 
+      display: block
+      text-align: center
+      font-family: $text3
+      font-weight: 500
+      font-size: 18px
+      line-height: 150%
+
+
+
 // main section's styles 
 section.main_section
   padding: 91px 0 115px
@@ -1673,11 +1732,33 @@ section.main_section
       padding-top: 0
       background: none
   &.command_box
+    position: relative
+    overflow: visible
+    z-index: 1
+    &::before
+      content: ""
+      width: 0
+      height: 0
+      border-bottom: 96px solid #F8F8F8
+      border-right: 1920px solid transparent
+      position: absolute
+      top: -96px
+      left: 0
+    &::after
+      content: ""
+      width: 0
+      height: 0
+      border-top: 96px solid #F8F8F8
+      border-right: 1920px solid transparent
+      position: absolute
+      bottom: -96px
+      left: 0
     .title
       margin-bottom: 60px
     .reviews_item
       margin-bottom: 0
   &.main_catalog
+    background: #fff
     padding-top: 150px
     .consultation
       background: none
@@ -1694,8 +1775,92 @@ section.main_section
       &:focus
         outline: none
   &.why_section
+    padding-top: 150px
     .title
       margin-bottom: 55px
+  &.reviews_section
+    position: relative
+    padding-top: 150px
+    z-index: 1
+    &::before
+      content: ""
+      width: 0
+      height: 0
+      border-bottom: 96px solid #f8f8f8
+      border-right: 1920px solid transparent
+      position: absolute
+      top: -96px
+      left: 0
+    &::after
+      content: ""
+      width: 0
+      height: 0
+      border-top: 96px solid #f8f8f8
+      border-right: 1920px solid transparent
+      position: absolute
+      bottom: -96px
+      left: 0
+    .review_slider
+      margin: 0 0 147px
+      .reviews_item-wrap
+        padding-top: 115px
+        max-width: 912px
+        margin: 0 29px
+      .slick-arrow
+        z-index: 123
+        top: initial
+        bottom: 0px
+        left: 50%
+        right: initial
+        transform: translateX(-50%) 
+        &.slick-prev
+          margin-left: -45px
+          transform: translateX(-50%) rotate(180deg) 
+        &.slick-next
+          margin-right: -45px
+
+    .photo_slider
+      margin: 78px 0 40px
+      .photo_slider-item
+        margin: 0 3px
+        padding-top: 20px
+        &:hover
+          position: relative
+          z-index: 123
+          text-decoration: none
+          &::after
+            content: ""
+            background: #3E3F4390 url('../img/icon-lupa.svg') center no-repeat
+            width: 92px
+            height: 92px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            margin-top: -10%
+
+          img
+            margin-left: -10%
+            margin-top: -10%
+            zoom: 1.2
+            max-width: initial
+        &:focus
+          outline: none
+        img
+          max-width: 100%
+          margin-bottom: 45px
+        span
+          display: block
+          font-family: $text-font
+          font-weight: 500
+          font-size: 18px
+          line-height: 130%
+          text-align: center
+          color: #3E3F4350
 
   &.about_section
     background: #fff
@@ -1763,11 +1928,14 @@ section.main_section
         &.download
           display: block
           margin-top: 24px
-
+  &.article_list
+    padding-top: 150px
 
   &.howWork_section
     position: relative
     overflow: visible
+    height: 1334px
+    background: #64BC2A url('../img/line.png') no-repeat center
     &::before
       content: ""
       width: 0

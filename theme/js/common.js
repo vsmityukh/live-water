@@ -109,8 +109,27 @@ $(function() {
 
 	$('.review_slider').slick({
 		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinity: true,
 		dots: false,
 		centerMode: true,
+		arrows: true,
+		responsive: [
+			{
+			  breakpoint: 564,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+		]
+	})
+
+	$('.photo_slider').slick({
+		slidesToShow: 6,
+		slidesToScroll: 3,
+		infinity: true,
+		dots: false,
 		arrows: true,
 		responsive: [
 			{
