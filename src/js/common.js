@@ -113,6 +113,7 @@ $(function() {
 		infinity: true,
 		dots: false,
 		centerMode: true,
+		variableWidth: true,
 		arrows: true,
 		responsive: [
 			{

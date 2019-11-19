@@ -1830,20 +1830,23 @@ section.main_section
         right: initial
         transform: translateX(-50%)
         &.slick-prev
-          margin-left: -45px
+          margin-left: -30px
           transform: translateX(-50%) rotate(180deg)
         &.slick-next
-          margin-right: -45px
+          margin-left: 30px
+
 
     .photo_slider
       margin: 58px 0 40px
       .photo_slider-item
         margin: 0 3px
         padding-top: 20px
+        padding-bottom: 40px;
         &:hover
           position: relative
           z-index: 123
           text-decoration: none
+          margin-bottom: -40px
           &::after
             content: ""
             background: #3E3F4390 url('../img/icon-lupa.svg') center no-repeat
