@@ -81,7 +81,7 @@
 
     <nav class="header_nav">
       <div class="container">
-        
+
         <!-- toggler -->
         <span class="toggler"></span><!-- /. toogler -->
 
@@ -124,7 +124,15 @@
 
         <div class="row">
           <div class="col-12">
-            <a href="#popup-add" data-fancybox>Товар добавлен в корзину</a>
+            <a href="#popup-add" data-fancybox style="display: block;">Товар добавлен в корзину</a>
+
+            <a href="#advice-add" data-fancybox style="display: block;">Нужна консультация?</a>
+
+            <a href="#feedback-add" data-fancybox style="display: block;">Свяжитесь с нами</a>
+
+            <a href="#question-add" data-fancybox style="display: block;">Задайте вопрос</a>
+
+            <a href="#order-add" data-fancybox style="display: block;">Создание заказа</a>
           </div>
         </div>
 
@@ -224,6 +232,102 @@
 
 
   <!-- popups -->
+
+  <div id="order-add" class="form_popup">
+    <div class="form_popup--wrap">
+
+      <div class="form_popup--text">
+          <h3>Создание заказа</h3>
+          <small>Наш менеджер свяжеться с вами для подтверждения заказа</small>
+      </div>
+
+      <div class="form_popup--body">
+        <form class="" action="index.html" method="post">
+          <div class="form_row">
+            <input type="text" name="name" class="input-name" placeholder="Имя*" value="">
+            <input type="text" name="phone" class="input-phone" placeholder="Телефон*" value="">
+            <input type="text" name="email" class="input-email" placeholder="E-mail*" value="">
+            <textarea name="comment" class="" placeholder="Здесь может быть ваш коментарий"></textarea>
+            <button class="btn">Отправить</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="question-add" class="form_popup">
+    <div class="form_popup--wrap">
+
+      <div class="form_popup--text">
+          <h3>Задайте вопрос</h3>
+          <small>Введите ваши данные и наш менеджер свяжеться с вами.</small>
+      </div>
+
+      <div class="form_popup--body">
+        <form class="" action="index.html" method="post">
+          <div class="form_row">
+            <input type="text" name="name" class="input-name" placeholder="Имя*" value="">
+            <input type="text" name="phone" class="input-phone" placeholder="Телефон*" value="">
+            <input type="text" name="email" class="input-email" placeholder="E-mail*" value="">
+            <textarea name="comment" class="" placeholder="Здесь может быть ваш коментарий"></textarea>
+            <button class="btn">Отправить</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="feedback-add" class="form_popup">
+    <div class="form_popup--wrap">
+
+      <div class="form_popup--text">
+          <h3>Свяжитесь с нами</h3>
+          <small>Пожалуйста, введите немного информации о себе и наш менеджер свяжеться с вами</small>
+      </div>
+
+      <div class="form_popup--body">
+        <form class="" action="index.html" method="post">
+          <div class="form_row">
+            <input type="text" name="name" class="input-name" placeholder="Имя*" value="">
+            <input type="text" name="phone" class="input-phone" placeholder="Телефон*" value="">
+            <input type="text" name="email" class="input-email" placeholder="E-mail*" value="">
+            <textarea name="comment" class="" placeholder="Здесь может быть ваш коментарий"></textarea>
+            <button class="btn">Отправить</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="advice-add" class="form_popup">
+    <div class="form_popup--wrap">
+
+      <div class="form_popup--text">
+          <h3>Нужна консультация?</h3>
+          <small>Введите ваши данные и наш менеджер свяжеться с вами.</small>
+      </div>
+
+      <div class="form_popup--body">
+        <form class="" action="index.html" method="post">
+          <div class="form_row">
+            <input type="text" name="name" class="input-name" placeholder="Имя*" value="">
+            <input type="text" name="phone" class="input-phone" placeholder="Телефон*" value="">
+            <input type="text" name="email" class="input-email" placeholder="E-mail*" value="">
+            <textarea name="comment" class="" placeholder="Здесь может быть ваш коментарий"></textarea>
+            <button class="btn">Отправить</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+
   <div id="popup-add" class="popup_add">
     <div class="popup_add--wrap">
       <img src="img/icon-add.svg" alt="">
@@ -236,7 +340,7 @@
       <div class="popup_add--btns">
         <a href="#" class="in_basket">Продолжить покупки</a>
         <a href="#" class="btn">Оформить заказ</a>
-      </div>    
+      </div>
     </div>
   </div>
   <!-- /. popups -->

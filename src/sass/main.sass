@@ -8,7 +8,7 @@
 ::selection
 	background-color: $accent
 	color: #fff
- 
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -29,7 +29,7 @@ body
 ul
 	list-style: none
 	padding-left: 0
- 
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -131,7 +131,7 @@ header
                 position: absolute
                 font-size: 12px
                 font-weight: bold
-                color: #ffffff                
+                color: #ffffff
                 background: #64BC2A
                 border-radius: 2px
                 padding-left: 6px
@@ -141,7 +141,7 @@ header
             &:hover
                 text-decoration: none
 
-	
+
 nav.header_nav
 	background-color: #24324A
 	height: 72px
@@ -149,7 +149,7 @@ nav.header_nav
 		display: flex
 		justify-content: flex-start
 		li
-			& + li 
+			& + li
 				margin-left: 10%
 			a
 				font-family: $default-font
@@ -173,7 +173,7 @@ nav.header_nav
 					background: #64BC2A
 
 .inner_wrap
-	padding: 
+	padding:
 
 .crumbs
 	ul
@@ -261,7 +261,7 @@ footer
             align-items: center
             img
                 max-width: 100%
-  
+
 
 .text_box
   font-family: $text-font
@@ -288,7 +288,7 @@ footer
     li
       margin: 4px 0
       padding-left: 25px
-      position: relative 
+      position: relative
       font-family: $text3
       font-style: normal
       font-weight: 500
@@ -324,13 +324,14 @@ footer
 		top: -20px
 		position: relative
 
-  
+
 .btn
   text-align: center
   background: #64BC2A
   font-family: $text3
   font-weight: bold
   font-size: 18px
+  line-height: 1
   color: #ffffff
   border-radius: 26px
   border: 1px solid transparent
@@ -396,7 +397,7 @@ footer
   padding: 58px 58px 60px
   &.active
     display: block
-    
+
 
 .prod_desc
   margin-bottom: 46px
@@ -423,16 +424,16 @@ footer
   .title
     text-align: left
 
- 
+
 //slider\
 .slider_wrap
-  margin: 58px -18px 138px
+  margin: 58px -18px 68px
 .prod_slider
   .prod_card
     margin: 0 18px
-.article_slider 
+.article_slider
   .article_item
-    margin: 0 9px
+    margin: 0 9px 70px
 .prod_card
   background: #FFFFFF;
   border: 1px solid #E9E9E9
@@ -500,7 +501,7 @@ footer
       margin-bottom: 50px;
       margin-left: auto;
       margin-right: auto;
-  
+
   &.catalog_card
     position: relative
     height: 100%
@@ -561,10 +562,10 @@ footer
       strong
         color: #64BC2A
 
-  
+
 .catalog_item--wrap
   margin-bottom: 51px
-  
+
 .gallery_slider
   margin-bottom: 63px
   .gallery_item
@@ -572,7 +573,7 @@ footer
     padding-bottom: 75px
     a
       display: block
-      position: relative       
+      position: relative
     a:focus
       outline: none
 
@@ -580,7 +581,7 @@ footer
   display: inline-block
   position: relative
   &.big-img
-    width: 
+    width:
     &::after
       width: 452px
       height: 264px
@@ -627,7 +628,7 @@ footer
   &::before
     content: ""
     background: url(../img/decor.svg) no-repeat
-    background-size: contain 
+    background-size: contain
     transform: rotate(180deg) translateY(60%)
     width: 335px
     height: 650px
@@ -672,6 +673,10 @@ footer
       margin-bottom: 22px
 
   &.text_row--inverse
+    .data-img
+      text-align: right
+      span
+        margin-right: 0
     .shadow-img
       text-align: right
 
@@ -705,13 +710,14 @@ footer
     margin-top: 36px
     a
       height: 52px
-      line-height: 52px
+      line-height: 1
       border-radius: 50px
       font-size: 18px
       text-align: center
       width: 251px
+      padding: 17px 34px
       &.in_basket
-        line-height: 50px
+        line-height: 1
 
 
 footer
@@ -745,7 +751,7 @@ footer
       ul + ul
         margin-left: 120px
       li
-        margin: 11px 0 
+        margin: 11px 0
         a
           color: #A4BDDE
           font-family: $text3
@@ -781,13 +787,13 @@ footer
             background: #24324a
             bottom: -18px
             left: 34px
-            
+
             small
               background: #4A5C76
               border-radius: 18px
               padding: 0 10px 0 23px
               height: 36px
-              width: 232px                
+              width: 232px
               display: flex
               justify-content: center
               align-items: center
@@ -833,7 +839,7 @@ footer
         margin: 0 36px
 
 
-  
+
 //basket page
 .basket_title
   display: flex
@@ -861,7 +867,7 @@ footer
 
 .basket_row--right
   .basket_price
-    padding-left: 
+    padding-left:
 
 
 .basket_wrap
@@ -872,7 +878,7 @@ footer
   padding-bottom: 8px
   padding-top: 36px
   border-bottom: 1px solid #E8E8E8
-  margin-bottom: 
+  margin-bottom:
 
 .basket_row--img
   height: 92px
@@ -949,7 +955,7 @@ footer
     margin-bottom: 10px
     font-weight: bold
     font-size: 18px
-    width: 251px
+    width: 265px
   a.more_orders
     margin-right: 0
     margin-left: auto
@@ -971,7 +977,7 @@ footer
   width: 100%
   padding: 66px 58px 79px
 .popup_form
-  
+
 .form_row
   margin-bottom: 58px
   .title
@@ -981,7 +987,7 @@ footer
     font-size: 22px
     line-height: 100%
     color: #3E3F43
-    margin-bottom: 36px 
+    margin-bottom: 36px
     span
       color: #FC6868
 
@@ -1070,7 +1076,7 @@ footer
 
 
 //=============== ONLINE STORE PAGE ===================
-.store_wrap  
+.store_wrap
 
   .store_item
     margin-bottom: 64px
@@ -1197,7 +1203,7 @@ small.subtitle
         background: rgba(62,63,67,.5)
         color: #ffffff
         text-decoration: none
-    
+
 
 // ============ BLOG PAGE ==============
 .topSlider
@@ -1285,7 +1291,7 @@ small.subtitle
     &.date_added::before
       background: url('../img/icon-date.svg') no-repeat
     &.view_count::before
-      background: url('../img/icon-view.svg') no-repeat 
+      background: url('../img/icon-view.svg') no-repeat
     & + span
       margin-left: 36px
 
@@ -1295,9 +1301,9 @@ article .topSlider_item--bottom
       background: url('../img/date_icon-b.svg') no-repeat
     &.view_count::before
       top: 8px
-      background: url('../img/views_icon-b.svg') no-repeat 
+      background: url('../img/views_icon-b.svg') no-repeat
 
-  
+
 .article_item
   background-position: center top
   background-size: contain
@@ -1342,7 +1348,7 @@ article .topSlider_item--bottom
         background: url('../img/icon-date.svg') no-repeat
         background-size: contain
       &.view_count::before
-        background: url('../img/icon-view.svg') no-repeat 
+        background: url('../img/icon-view.svg') no-repeat
         background-size: contain
       & + span
         margin-left: 22px
@@ -1354,7 +1360,7 @@ article .topSlider_item--bottom
     background: #FFFFFF
     border: 1px solid #E9E9E9
     border-radius: 10px
-    padding: 0 11px 0 48px  
+    padding: 0 11px 0 48px
     margin-right: 18px
   input, input::placeholder
     color: #AEAEAE
@@ -1382,7 +1388,7 @@ article
     p
       line-height: 2.5
       margin-bottom: 2.5em
-    .text_row 
+    .text_row
       align-items: center
       p
         line-height: 1.5
@@ -1396,7 +1402,7 @@ article
       transform: translateY(-50%)
       left: initial
       right: 0
-      top: 50% 
+      top: 50%
     .text
       p
         line-height: 1.5
@@ -1481,12 +1487,12 @@ article
     display: block
     color: #3E3F43
     font-weight: bold
-  
-  
+
+
 
 .contacts_wrap
   margin-bottom: 122px
-  
+
   .contacts_maps
     &.shadow-img::after
       width: 90%
@@ -1679,7 +1685,7 @@ a.download
       height: 79px
       border: 2px dashed #FFFFFF50
       left: 50%
-      
+
     &::after
       content: ""
       background: url('../img/icon-point.svg') no-repeat
@@ -1688,7 +1694,7 @@ a.download
       display: inline-block
       position: absolute
       left: 50%
-      
+
     p
       margin: 20px 0 5px
       font-family: $text-font
@@ -1697,7 +1703,7 @@ a.download
       line-height: 27px
       text-transform: uppercase
       color: #3E3F43
-    small 
+    small
       display: block
       text-align: center
       font-family: $text3
@@ -1707,7 +1713,7 @@ a.download
 
 
 
-// main section's styles 
+// main section's styles
 section.main_section
   padding: 91px 0 115px
   &.green_box
@@ -1776,6 +1782,16 @@ section.main_section
         outline: none
   &.why_section
     padding-top: 150px
+    &::before
+      content: "";
+      background: url(../img/element.svg) no-repeat top center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 650px;
+      height: 418px;
+      opacity: .4;
     .title
       margin-bottom: 55px
   &.reviews_section
@@ -1812,15 +1828,15 @@ section.main_section
         bottom: 0px
         left: 50%
         right: initial
-        transform: translateX(-50%) 
+        transform: translateX(-50%)
         &.slick-prev
           margin-left: -45px
-          transform: translateX(-50%) rotate(180deg) 
+          transform: translateX(-50%) rotate(180deg)
         &.slick-next
           margin-right: -45px
 
     .photo_slider
-      margin: 78px 0 40px
+      margin: 58px 0 40px
       .photo_slider-item
         margin: 0 3px
         padding-top: 20px
@@ -1894,8 +1910,8 @@ section.main_section
       padding-right: 100px
 
     a.btn
-      display: block
-      min-width: 308px 
+      display: inline-block
+      min-width: 308px
       margin-top: 29px
 
   &.main_screen
@@ -1962,6 +1978,54 @@ section.main_section
     .text_row
       margin-top: 65px
 
+.form_popup
+  .form_row
+    margin-bottom: 0
+    .btn
+      margin-top: 55px
+      margin-left: auto
+      margin-right: auto
+      display: block
+      &:focus
+        outline: none
+
+// popup forms
+.form_popup
+	display: none
+	max-width: 443px !important
+	.form_popup--text
+		h3
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 72px
+			font-family: $text-font
+			font-weight: bold
+			font-size: 36px
+			line-height: 100%
+			text-align: center
+		small
+			display: flex
+			align-items: center
+			justify-content: center
+			text-align: center
+			height: 48px
+			margin: 6px 0 18px
+			font-family: $text3
+			font-weight: normal
+			font-size: 16px
+			line-height: 100%
+			color: #3E3F4370
+
+  .form_row
+    .btn
+      margin-top: 55px
+  
+
+
+
+
+
 @media (max-width: 1440px)
   nav.header_nav ul li+li
     margin-left: 7%
@@ -1974,10 +2038,9 @@ section.main_section
     font-size: 28px
     span
       margin: 0 3px
-  
+
   .contacts_wrap
     .contacts_data
       padding-top: 0
 
 @import "media" // Always at the end
-
