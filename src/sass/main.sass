@@ -1227,10 +1227,11 @@ small.subtitle
       line-height: 1.5
     a
       width: 216px
-      height: 40px
-      line-height: 40px
+      line-height: 1
       display: block
       margin: 37px 0 34px
+      padding-top: 10px
+      padding-bottom: 10px 
 
 
   .slick-arrow
@@ -1309,6 +1310,9 @@ article .topSlider_item--bottom
   background-size: contain
   background-repeat: no-repeat
   height: 322px
+  margin-left: auto
+  margin-right: auto
+  display: block
   width: 100%
   max-width: 468px
   margin-bottom: 83px
@@ -1491,7 +1495,7 @@ article
 
 
 .contacts_wrap
-  margin-bottom: 122px
+  padding-bottom: 122px
 
   .contacts_maps
     &.shadow-img::after
@@ -2025,11 +2029,60 @@ section.main_section
       margin-top: 55px
   
 
+.contacts_wrap
+  position: relative
+  overflow: hidden
+  &::before
+    content: "";
+    background: url(../img/decor.svg) no-repeat;
+    background-size: contain;
+    width: 335px;
+    height: 650px;
+    position: absolute;
+    right: -83px
+    top: 91px;
 
-
-
+.article_slider
+  .slick-slide
+    margin: 0 20px
+@media (max-width: 1509px) and (min-width: 1200px)
+  .container
+    max-width: 90%
 
 @media (max-width: 1440px)
+  section.main_section.reviews_section
+    padding-top: 60px
+  section.main_section.reviews_section .review_slider
+    margin-bottom: 60px
+  .why_section
+    a.btn.btn_center
+      margin-bottom: 40px
+  section.main_section.main_screen .main_text h1
+    font-size: 36px
+  section.main_section.main_screen .main_text small
+    font-size: 18px
+    margin: 18px 0 29px
+  section.main_section.main_screen
+    height: 635px
+
+  section.main_section
+    padding: 60px 0 75px
+
+  .about_section
+    .text_row.text_row--inverse .data-img
+      text-align: center
+      margin-bottom: 36px
+  .proposition
+    .text_row div.data-img
+      margin-bottom: 36px
+
+  .text_row div.data-text
+    padding-top: 0
+    padding-left: 60px  
+  .article_item p
+    font-size: 14px
+  .article_item .article_item--bottom
+    padding-top: 10px
   nav.header_nav ul li+li
     margin-left: 7%
   .top_right .top_basket

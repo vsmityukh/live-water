@@ -14,15 +14,98 @@
         &.text_row--inverse
             div.data-img
                 order: -1   
-
+    .topSlider .topSlider_item p
+        font-size: 16px
     
 
 // ≥992px
 +media-breakpoint-down(md)
+    section.main_section
+        &::before, &::after
+            content: none !important
+    section.main_section.howWork_section
+        display: none
+        
+    section.main_section.article_list
+        padding-top: 60px
+    .product_wrap.product_main .photo_box .main_photo
+        margin-left: auto
+        margin-right: auto
+        padding: 58px 56px
+        margin-bottom: 22px
+    .product_wrap
+        background: none
+    .reviews_item
+        padding: 0 22px 39px
+    article::before
+        content: none
+    .text_row
+        margin-bottom: 36px
+    
+    article .text .text_row
+        display: block
+    article .text .text_row .data-img
+        width: 100%
+    article .text .text_row div.data-text
+        width: 100%
+        padding-left: 0   
+        margin-top: 36px 
+
+    .subscribe_from
+        width: 232px
+        margin-left: auto
+        margin-right: auto
+    .subscribe_from input
+        width: 100%
+        margin-bottom: 22px
+        height: 32px
+        font-size: 12px
+        &::placeholder
+            font-size: 12px
+    .consultation .btn
+        font-size: 12px
+        padding: 9px 38px
+    .consultation
+        padding-top: 11px
+        padding-bottom: 54px
+        background-size: contain;
+        background-position: bottom;
+    .consultation .subtitle
+        font-size: 12px
+        margin: 16px 0 22px
+    .consultation .title
+        line-height: 1
+    input.input-email
+        background: #fff url(../img/icon-mail.svg) no-repeat 13px 10px
+        
+
+    .topSlider .slick-arrow
+        display: none !important
     .contacts_data
         margin-top: 42px
     .no-relative
+        padding-left: 0
+        padding-right: 0
         position: static
+        .top_right
+            padding: 0 22px
+
+    .top_right .top_social .social a+a
+        margin-left: 10px
+        height: 13px
+        width: 13px
+        display: inline-block;
+        img
+            max-width: 100%
+    .top_right .top_social 
+        justify-content: space-between
+        width: 100%
+        .social
+            width: 45%
+        span.devider
+            display: none
+            margin: 0 6px
+    
     header
         min-height: initial
         max-width: 720px
@@ -62,6 +145,9 @@
         background-color: transparent
         top: 22px
         left: 25px
+        height: 19px
+        .container
+            padding: 0
         .toggler
             background: url('../img/humburger.svg') no-repeat
             width: 26px
@@ -80,14 +166,369 @@
                     font-weight: normal
                 & + li
                     margin-top: 40px
+
+
+    #order_form.order_popup
+        padding: 36px 22px
+        max-width: 279px
+    .form_row .title
+        font-size: 18px
+        margin-bottom: 22px
+    .form_radio label
+        font-size: 12px
+    .form_row input[type=text]
+        margin-bottom: 8px
+        font-size: 12px
+        &::placeholder
+            font-size: 12px
+    .form_row 
+        margin-bottom: 36px
+        textarea
+            font-size: 12px
+            &::placeholder
+                font-size: 12px
+    .form_radio.form_radio-block
+        padding: 22px 0 14px
+    .form_radio label::before
+        top: 2px
+    .form_row .title + .form_radio-block
+        padding-top: 0
+
+    .contacts_wrap 
+        padding-bottom: 58px
+        &::before
+            width: 190px
+            height: 296px
+            top: initial
+            bottom: 96px
+            right: -38px
+
+        .contacts_data
+            font-size: 12px
+    .contacts_wrap .contacts_data h1
+        font-size: 18px
+        margin-bottom: 22px
+    .contacts_wrap .contacts_phone
+        margin-top: 22px
+        margin-bottom: 30px
+    .contacts_wrap a.btn
+        font-size: 12px
+        padding: 10px 28px
+    .contacts_wrap .contacts_place span::before, .contacts_wrap .contacts_phone a::before
+        top: 2px
+    .contacts_wrap .contacts_mail a::before
+        top: 4px
     
+
+
     .crumbs ul li a,.crumbs ul li span
         font-size: 14px
     .crumbs ul
         margin-bottom: 22px
         padding: 22px 0
+
 // ≥768px
 +media-breakpoint-down(sm)
+    section.main_section.about_section .data-text
+        padding-right: 0
+    .proposition
+        a.btn.btn_center
+            margin-top: 0
+            margin-bottom: 0
+        .text
+            .proposition_item 
+                margin-bottom: 27px
+                p
+                    font-size: 22px
+                    line-height: 27px
+                    margin-bottom: 8px
+                span
+                    font-size: 12px
+                    line-height: 1.4
+    section.main_section.reviews_section .review_slider .reviews_item-wrap
+        padding-top: 90px
+    .reviews_section
+        .title_left
+            width: 60%
+    section.main_section.reviews_section .photo_slider
+        margin-top: 35px
+    section.main_section.why_section .title
+        margin-bottom: 51px
+    .why_box
+        margin-bottom: 36px
+        p
+            margin: 14px 0 7px
+        small
+            line-height: 1
+    section.main_section.why_section
+        padding-top: 50px
+    section.main_section, section.main_section.proposition, section.main_section.main_catalog
+        padding: 50px 0 60px
+    .command_slider .slick-track
+        padding-top: 88px
+    section.main_section.command_box .title
+        margin-bottom: 35px
+
+    a.btn.btn_center
+        font-size: 12px
+        padding: 9px 39px
+        width: 185px
+        margin-top: 36px
+        margin-bottom: 36px
+        margin-left: auto
+        margin-right: auto
+    
+    .slider_wrap.article_slider
+        width: 276px
+        margin-left: auto
+        margin-right: auto
+    small.subtitle
+        font-size: 12px
+        margin-bottom: 22px
+    .prod_card:not(.catalog_card) .prod_card--desc 
+        max-width: 150px
+        margin: auto
+        .price
+            text-align: right
+    .prod_card.catalog_card .prod_card--desc .name
+        font-size: 16px
+        font-weight: 700
+    .prod_card .prod_card--desc .desc
+        font-size: 12px
+    .prod_card.catalog_card .prod_card--desc .price
+        font-size: 16px
+    .prod_card.catalog_card .prod_card--img
+        height: 196px
+
+    .about_wrap::before
+        width: 190px
+        height: 296px
+        left: -40px
+    .text_row div.data-text
+        padding-left: 0
+    .text_row div.data-img
+        margin-bottom: 42px
+    .gallery_slider .gallery_item
+        padding-bottom: 56px
+
+    .prod_desc
+        .tab_links
+            display: block
+            margin-bottom: 0
+            
+            li
+                width: 100%
+                &:first-child
+                    a
+                        border-top-right-radius: 10px
+                        border-top-left-radius: 10px
+                a
+                    width: 100%
+                    display: block
+                    border-radius: 0
+    .tab_links li+li
+        margin-left: 0
+    .tabs_item
+        padding: 23px 20px
+    .tab_links li a.active::after
+        content: none
+
+    .text_box h3
+        font-size: 18px
+        margin-bottom: 22px
+    .text_box p
+        font-size: 12px
+    .prod_card .prod_card--img
+        height: 81px
+        width: 81px
+        margin-left: auto
+        margin-right: auto
+    .prod_card 
+        padding: 0 15px
+        margin: 0 4px
+        .prod_card--img
+            height: 81px
+
+    
+
+    .prod_card .prod_card--desc .name
+        font-size: 12px
+        height: 24px
+    .prod_card .prod_card--desc .price
+        font-size: 14px
+    .prod_card .prod_card--desc .in_basket
+        width: auto
+        display: inline-block
+        font-size: 12px
+        padding: 9px 28px
+        line-height: 1
+        height: auto
+        margin-bottom: 29px
+
+    .prod_card .prod_card--img .sales
+        width: 48px
+        height: 33px
+        background: url(../img/discount_label-mobile.png) no-repeat
+        font-size: 12px
+        padding-bottom: 5px
+
+    .text_box h4
+        font-size: 14px
+    .product_wrap.product_main .prod_top .text_box
+        padding-left: 0
+    .price
+        font-size: 22px
+        padding-top: 8px;
+    .text_box--price a.btn
+        font-size: 12px
+        padding: 9px 38px
+    .product_wrap .prod_top
+        margin-bottom: 47px
+    .reviews_wrap
+        padding-bottom: 20px
+    .reviews_wrap::before
+        width: 190px
+        height: 296px
+        left: -55px
+
+    .reviews_wrap .title
+        margin-bottom: 78px
+        line-height: 1
+    .reviews_item
+        margin-bottom: 88px 
+        .reviews_item--img
+            margin-top: -46px
+            img
+                width: 92px
+                height: 92px
+    .reviews_item-wrap
+        .reviews_item
+            margin-bottom: 88px 
+    .reviews_item .reviews_item--date
+        line-height: 1
+        font-size: 12px
+    .reviews_item .reviews_item--name
+        font-size: 18px
+    .reviews_item .reviews_item--text
+        font-size: 12px
+        margin-bottom: 20px
+
+
+    .crumbs ul
+        padding: 20px 0
+        margin-bottom: 20px
+    .text p
+        font-size: 12px
+    .slick-arrow
+        width: 22px
+        height: 22px
+        background-size: contain;
+        top: -58px
+    .slick-arrow.slick-prev
+        right: 45px
+    .slider_wrap
+        margin-top: 36px
+        margin-bottom: 36px
+    .more_prod .title
+        line-height: 1
+    .pagination li a
+        font-size: 12px
+    .pagination li+li
+        margin-left: 8px
+    .article_item
+        height: 190px
+        width: 276px !important
+        padding: 20px 22px
+        margin-bottom: 36px
+        
+    .article_item .article_item--name
+        font-size: 14px
+        br
+            display: none
+    .article_slider .article_item
+        margin: 0 20px 0
+    .article_item p
+        font-size: 12px
+        margin: 11px 0
+    .article_item .article_item--bottom
+        padding-top: 6px
+    .topSlider .topSlider_item a
+        font-size: 12px
+        padding: 10px 38px
+        margin: 0 0 14px
+        width: auto
+        display: inline-block
+    .topSlider_item--bottom span+span
+        margin-left: 18px
+    .topSlider .slick-dots
+        margin-bottom: 0
+        bottom: 25px
+    .topSlider_item--bottom span
+        font-size: 14px
+    .topSlider_item--bottom span::before
+        top: 5px
+    .topSlider .topSlider_item h2
+        font-size: 24px
+        margin-bottom: 28px
+    .topSlider .topSlider_item
+        height: 377px
+        padding-top: 31px
+    .topSlider .topSlider_item p
+        font-size: 12px
+    .title.inner_title
+        margin-bottom: 22px
+    .basket_title
+        display: none
+    .basket_row
+        padding-top: 14px
+        padding-bottom: 14px    
+        position: relative
+    .basket_row--img
+        height: 58px
+        width: 58px
+        overflow: hidden
+        img
+            max-width: 100%
+    .basket_row--center, .basket_title--center
+        padding: 0
+        padding-left: 15px
+        width: 150px
+    .basket_row--center
+        display: block
+    .basket_row--center .basket_name
+        font-size: 12px
+    .basket_remove
+        position: absolute
+        top: 14px
+        right: 0
+    .basket_row--right
+        width: auto
+    .basket_quantity 
+        margin-top: 14px
+        input
+            font-size: 12px
+
+    .basket_row--right .basket_price
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+    .basket_bottom
+        margin-top: 22px
+    .basket_bottom .basket_bottom--total p
+        font-size: 22px
+        span
+            font-size: 22px
+    .basket_bottom a.btn
+        font-size: 12px
+        padding: 10px 35px
+        width: 174px
+    .basket_bottom a.more_orders
+        font-size: 12px
+    .basket_wrap
+        margin-bottom: 58px
+    
+
+
     .prod_card
         margin-bottom: 8px
     .store_wrap
@@ -108,13 +549,14 @@
         margin-bottom: 0
     .title
         font-size: 22px
-    .text p+.text_row
-        margin-bottom: 36px
-    .text
+        line-height: 1
+    .text p+.text_row, .text
         margin-bottom: 36px
     .text_row
-        margin-bottom: 36px
-
+        margin-bottom: 20px
+    .about_content
+        .text
+            margin-bottom: 0
     .text p
         font-size: 12px
     .text_row div.data-text h1, .text_row div.data-text h2
@@ -126,13 +568,141 @@
     
     
 
+    article.text_inner::before
+        background-size: 296px 190px
+        width: 190px
+        height: 296px
+        right: initial
+        left: 0
+        transform: rotate(180deg) translateY(50%)
+    article.text_inner .text h1, article.text_inner .text p+h2
+        font-size: 22px
+        line-height: 1
+        margin-bottom: 16px
     footer
         padding-top: 44px
         .f_top
             .f_top--cards
-                width: 220px
+                width: auto
+    footer .f_top
+        margin-bottom: 34px
+    footer .f_top .f_top--cards
+        margin-top: 25px
+    footer .f_top .slogan
+        font-size: 14px
+        margin-bottom: 32px
+    footer .f_top .f_top--cards .cards_wrap
+        margin-left: 0
+    footer .f_top .f_top--menu
+        margin-left: 0
+        padding-top: 0
+        margin-top: 25px
+    footer .f_top .f_top--menu ul
+        margin-bottom: 0
+    footer .f_top .f_top--feedback
+        text-align: left
+        margin-top: 54px
+    footer .f_top .f_top--feedback a.btn
+        display: block
+    footer .f_top .f_top--menu li a
+        font-size: 14px
+    footer .f_top .f_top--menu ul+ul
+        margin-left: 47px
+    footer .f_bottom
+        flex-wrap: wrap
+        .f_bottom--links
+            display: flex
+            justify-content: space-between
+            margin-bottom: 22px
+            order: -1
+            a
+                font-size: 12px
+            span
+                margin: 0 10px
+
 // ≥576px
 +media-breakpoint-down(xs)
+
+    section.main_section.reviews_section .photo_slider .photo_slider-item
+        img
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 13px
+            display: block
+        &:hover img
+            margin-left: auto
+            margin-right: auto
+            margin-top: initial
+            zoom: initial
+    section.main_section.reviews_section .photo_slider .photo_slider-item
+        padding-bottom: 0
+    section.main_section.reviews_section .photo_slider .photo_slider-item span
+        font-size: 12px
+    section.main_section.reviews_section .photo_slider
+        margin-top: 0
+
+    section.main_section.reviews_section .photo_slider
+        margin-bottom: 0
+
+
+    .photo_slider
+        .slick-arrow
+            top: -22px
+    section.main_section.reviews_section .review_slider .slick-arrow.slick-next
+        margin-left: 15px
+    section.main_section.reviews_section .review_slider .slick-arrow.slick-prev
+        margin-left: -15px
+
+
+    .more_prod .title
+        width: 70%
+    .product_wrap .prod_top .text_box
+        padding-top: 22px
+    .product_wrap .photo_box
+        height: 205px
+    .product_wrap .thumb_photos .thumb_item
+        height: 65px
+        width: 65px
+        border-radius: 14px
+    .product_wrap .photo_box .main_photo
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            max-width: 80%
+    .subcat_row
+        margin: 14px 0 22px
+    .mini_title
+        font-size: 14px
+        margin-bottom: 22px
+    .subcat_item
+        font-size: 12px
+        height: 87px
+    .product_list
+        .col-6
+            padding-left: 4px
+            padding-right: 4px 
+    .prod_card .prod_card--desc .price sup
+        top: -13px
+        left: -10px
+    .product_wrap.product_main .text_box p
+        font-size: 12px
+    .text_box ul
+        margin-top: 17px
+    .text_box ul li
+        font-size: 12px
+    .product_wrap.product_main .photo_box .main_photo
+        padding-top: 30px
+        padding-bottom: 30px
+    .text_box h1
+        font-size: 18px
+    
+    .article_slider .article_item
+        margin: 0 auto 0
+    .topSlider .topSlider_item h2
+        font-size: 18px
+        margin-bottom: 22px
     .popup_add
         padding: 58px 22px
         .popup_add--wrap

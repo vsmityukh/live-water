@@ -35,16 +35,23 @@ $(function() {
 		arrows: true,
 		responsive: [
 			{
-			  breakpoint: 991,
+			  breakpoint: 1440,
 			  settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2
 			  }
 			},
 			{
-			  breakpoint: 564,
+			  breakpoint: 991,
 			  settings: {
-				slidesToShow: 1,
+				slidesToShow: 2,
+				slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 1, 
 				slidesToScroll: 1
 			  }
 			}
@@ -68,18 +75,11 @@ $(function() {
 				slidesToShow: 2,
 				slidesToScroll: 2
 			  }
-			},
-			{
-			  breakpoint: 564,
-			  settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			  }
 			}
 		  ]
 	})
 
-	$('.gallery_slider, .command_slider').slick({
+	$('.gallery_slider').slick({
 		slidesToShow: 3,
 		dots: false,
 		arrows: true,
@@ -101,10 +101,41 @@ $(function() {
 		  ]
 	})
 
+	$('.command_slider').slick({
+		slidesToShow: 3,
+		dots: false,
+		arrows: true,
+		responsive: [
+			{
+			  breakpoint: 1440,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			  }
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+		  ]
+	})
+
+
 	$('.topSlider').slick({
 		slidesToShow: 1,
 		dots: true,
-		arrows: true
+		arrows: true,
+		responsive: [
+			{
+			  breakpoint: 991,
+			  settings: {
+				arrows: false
+			  }
+			}
+		]
 	})
 
 	$('.review_slider').slick({
@@ -120,7 +151,9 @@ $(function() {
 			  breakpoint: 564,
 			  settings: {
 				slidesToShow: 1,
-				slidesToScroll: 1
+				slidesToScroll: 1,
+				centerMode: false,
+				variableWidth: false
 			  }
 			}
 		]
@@ -136,7 +169,7 @@ $(function() {
 			{
 			  breakpoint: 564,
 			  settings: {
-				slidesToShow: 1,
+				slidesToShow: 2,
 				slidesToScroll: 1
 			  }
 			}
