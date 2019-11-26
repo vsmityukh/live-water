@@ -359,72 +359,88 @@
         <div class="form_row">
           <div class="title">Личные данные</div>
           
-          <div class="personal_data">
-            <div class="form_radio">
+          <div class="personal_data" data-target="#form_list">
+            <div data-href="#form_list1" class="form_radio form_tabs active" >
               <input type="radio" name="personal-type" value="Физ. лицо" id="fizlico">
               <label for="fizlico">Физ. лицо</label>
             </div>
 
-            <div class="form_radio">
+            <div data-href="#form_list2" class="form_radio form_tabs">
               <input type="radio" name="personal-type" value="Юр. лицо" id="yurlico">
               <label for="yurlico">Юр. лицо</label>
             </div>
           </div>
-
-          <input type="text" name="name" class="input-name" placeholder="ФИО">
-          <input type="text" name="phone" class="input-phone input50" placeholder="Телефон">
-          <input type="text" name="email" class="input-email input50" placeholder="E-mail">
-
-          <textarea name="comment" class="input-comment" placeholder="Здесь может быть ваш коментарий к заказу"></textarea>
-
-        </div>
-
-        <div class="form_row">
-          <div class="title">Способ доставки <span>*</span></div>
-
-          <div class="form_radio form_radio-block">
-            <input type="radio" name="delivery-type" value="CДЭК" id="sdek">
-            <label for="sdek">CДЭК</label>
-          </div>
-
-          <div class="form_radio form_radio-block">
-            <input type="radio" name="delivery-type" value="ПЭК" id="pek">
-            <label for="pek">ПЭК</label>
-          </div>
-
-          <div class="form_radio form_radio-block">
-            <input type="radio" name="delivery-type" value="Другая" id="another">
-            <label for="another">Другая</label>
-          </div>
-
         </div>
 
 
-        <div class="form_row">
-          <div class="title">Данные о доставке <span>*</span></div>
+        <div class="form_list" id="form_list">
+          <div class="active" id="form_list1">
 
-          <input type="text" name="addres" class="input-addres" placeholder="Адрес доставки">
-          <input type="text" name="passport" class="input-passport input50" placeholder="Серия паспорта">
-          <input type="text" name="serial" class="input-serial input50" placeholder="Номер паспорта">
-          <input type="text" name="passport-date" class="input-date" placeholder="Дата выдачи паспорта"></input>
-        </div>
+            <div class="form_row">
+              <input type="text" name="name" class="input-name" placeholder="ФИО">
+              <input type="text" name="phone" class="input-phone input50" placeholder="Телефон">
+              <input type="text" name="email" class="input-email input50" placeholder="E-mail">
+
+              <textarea name="comment" class="input-comment" placeholder="Здесь может быть ваш коментарий к заказу"></textarea>
+            </div>
+
+            <div class="form_row">
+              <div class="title">Способ доставки <span>*</span></div>
+
+              <div class="form_radio form_radio-block">
+                <input type="radio" name="delivery-type" value="CДЭК" id="sdek">
+                <label for="sdek">CДЭК</label>
+              </div>
+
+              <div class="form_radio form_radio-block">
+                <input type="radio" name="delivery-type" value="ПЭК" id="pek">
+                <label for="pek">ПЭК</label>
+              </div>
+
+              <div class="form_radio form_radio-block">
+                <input type="radio" name="delivery-type" value="Другая" id="another">
+                <label for="another">Другая</label>
+              </div>
+
+            </div>
 
 
-        <div class="form_row">
-          <div class="title">Способ оплаты <span>*</span></div>
+            <div class="form_row">
+              <div class="title">Данные о доставке <span>*</span></div>
 
-          <div class="form_radio form_radio-block">
-            <input type="radio" name="payment-type" value="Банковской картой (на сайте)" id="bank">
-            <label for="bank">Банковской картой (на сайте)</label>
+              <input type="text" name="addres" class="input-addres" placeholder="Адрес доставки">
+              <input type="text" name="passport" class="input-passport input50" placeholder="Серия паспорта">
+              <input type="text" name="serial" class="input-serial input50" placeholder="Номер паспорта">
+              <input type="text" name="passport-date" class="input-date" placeholder="Дата выдачи паспорта"></input>
+            </div>
+
+
+            <div class="form_row">
+              <div class="title">Способ оплаты <span>*</span></div>
+
+              <div class="form_radio form_radio-block">
+                <input type="radio" name="payment-type" value="Банковской картой (на сайте)" id="bank">
+                <label for="bank">Банковской картой (на сайте)</label>
+              </div>
+
+              <div class="form_radio form_radio-block">
+                <input type="radio" name="payment-type" value="Выставить счет" id="payment">
+                <label for="payment">Выставить счет</label>
+              </div>
+
+
+            </div>
+
           </div>
 
-          <div class="form_radio form_radio-block">
-            <input type="radio" name="payment-type" value="Выставить счет" id="payment">
-            <label for="payment">Выставить счет</label>
+
+          <div class="" id="form_list2">
+            <!-- here another form row inputs -->
+            here another form row inputs
           </div>
-
-
         </div>
+
+        
 
         <!-- basket bottom info -->
         <div class="basket_bottom">
