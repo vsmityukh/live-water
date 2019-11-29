@@ -8,7 +8,8 @@
 ::selection
 	background-color: $accent
 	color: #fff
-
+*:focus
+  outline: none
 body
 	font-size: 16px
 	min-width: 320px
@@ -739,6 +740,7 @@ footer
       line-height: 1.5
       display: block
       margin-bottom: 38px
+      color: #A4BDDE70
     .f_top--social
       display: flex
       a
@@ -753,7 +755,7 @@ footer
       li
         margin: 11px 0
         a
-          color: #A4BDDE
+          color: #A4BDDE70
           font-family: $text3
           font-weight: 500
           font-size: 18px
@@ -813,11 +815,16 @@ footer
         line-height: 1
       a.btn
         background: transparent
-        color: #A4BDDE
+        color: #A4BDDE70
         font-size: 18px
-        padding: 11px 50px
-        border: 1px solid #A4BDDE
+        padding: 8px 45px
+        border: 1px solid #A4BDDE70
         border-radius: 20px
+        font-weight: normal
+        display: block;
+        max-width: 220px;
+        margin-right: 0;
+        margin-left: auto;
 
 
   .f_bottom
@@ -1001,14 +1008,6 @@ footer
       position: absolute
       background-position: 13px 19px
       background-repeat: no-repeat
-    &.input-name::before
-      background-image: url('../img/user_icon.svg')
-      width: 13px
-      height: 19px
-      position: absolute
-      left: 19px
-
-
 
   input[type=text]
     padding: 0 24px 0 48px
@@ -1016,9 +1015,31 @@ footer
     width: 100%
     display: block
     height: 40px
-    background: linear-gradient(0deg, #F8F8F8, #F8F8F8), #FFFFFF;
+    background: #F8F8F8
     border: 1px solid #E9E9E9
     border-radius: 5px
+    &.input-name
+      background: #f8f8f8 url('../img/user_icon.svg') 19px center
+      background-repeat: no-repeat
+    &.input-phone
+      background: #f8f8f8 url('../img/phone_icon.svg') 21px center
+      background-repeat: no-repeat
+    &.input-email
+      background: #f8f8f8 url('../img/mail_icon.svg') 19px center
+      background-repeat: no-repeat
+    &.input-addres
+      background: #f8f8f8 url('../img/place_icon.svg') 19px center
+      background-repeat: no-repeat
+    &.input-passport
+      background: #f8f8f8 url('../img/passport_icon.svg') 17px center
+      background-repeat: no-repeat
+    &.input-serial
+      background: #f8f8f8 url('../img/serial_icon.svg') 17px center
+      background-repeat: no-repeat
+    &.input-date
+      background: #f8f8f8 url('../img/date-icon.svg') 19px center
+      background-repeat: no-repeat
+
     &::placeholder
       color: #AEAEAE
   textarea
@@ -1029,6 +1050,9 @@ footer
     display: block
     width: 100%
     min-height: 94px
+    &.input-comment
+      background: #f8f8f8 url('../img/comment_icon.svg') 19px 15px
+      background-repeat: no-repeat
     &::placeholder
       color: #AEAEAE
 .personal_data
@@ -1645,7 +1669,7 @@ a.download
 
 
 .proposition_item
-  margin-bottom: 59px
+  margin-bottom: 46px
   p
     margin: 0 0 22px
     font-family: $text-font
@@ -1663,7 +1687,7 @@ a.download
 
 .steps_wrap
   margin-top: 123px
-  margin-bottom: 144px
+  margin-bottom: 115px
   .step_item
     width: 411px
     margin: 0 auto
@@ -1748,6 +1772,8 @@ section.main_section
     position: relative
     overflow: visible
     z-index: 1
+    padding-bottom: 48px
+    padding-top: 51px
     &::before
       content: ""
       width: 0
@@ -1770,15 +1796,33 @@ section.main_section
       margin-bottom: 60px
     .reviews_item
       margin-bottom: 0
+      padding: 0 36px 40px
+      .reviews_item--text
+        color: #3E3F43;
+        opacity: 0.7;
+        margin-top: 22px
+      .reviews_item--link
+        font-size: 18px
+        & + .reviews_item--link
+          margin-top: 13px
+
+
   &.main_catalog
     background: #fff
-    padding-top: 150px
+    padding-top: 237px
+    small.subtitle
+      max-width: initial
     .consultation
       background: none
       padding-top: 0
       padding-bottom: 0
+      margin-bottom: 119px
       .title
         text-align: center
+    .slider_wrap
+      margin-bottom: 85px
+    .prod_card .prod_card--desc .in_basket
+      margin-bottom: 0
     .prod_card
       background: transparent
       border: none
@@ -1788,7 +1832,10 @@ section.main_section
       &:focus
         outline: none
   &.why_section
-    padding-top: 150px
+    padding-top: 237px
+    a.btn.btn_center
+      margin-top: 0
+      margin-bottom: 80px
     &::before
       content: "";
       background: url(../img/element.svg) no-repeat top center;
@@ -1803,7 +1850,8 @@ section.main_section
       margin-bottom: 55px
   &.reviews_section
     position: relative
-    padding-top: 150px
+    padding-top: 51px
+    padding-bottom: 0
     z-index: 1
     &::before
       content: ""
@@ -1821,7 +1869,7 @@ section.main_section
       border-top: 96px solid #f8f8f8
       border-right: 1920px solid transparent
       position: absolute
-      bottom: -96px
+      bottom: -136px
       left: 0
     .review_slider
       margin: 0 0 147px
@@ -1837,10 +1885,10 @@ section.main_section
         right: initial
         transform: translateX(-50%)
         &.slick-prev
-          margin-left: -30px
+          margin-left: -22.5px
           transform: translateX(-50%) rotate(180deg)
         &.slick-next
-          margin-left: 30px
+          margin-left: 22.5px
 
 
     .photo_slider
@@ -1955,13 +2003,43 @@ section.main_section
           display: block
           margin-top: 24px
   &.article_list
-    padding-top: 150px
+    padding-top: 191px
+    .slider_wrap 
+      margin-bottom: 52px
+    .article_item 
+      padding-left: 42px
+      padding-right: 42px
+      border-radius: 25px
+      height: 375px
+      &::after
+        top: 20%
+      p
+        height: 133px
+        margin: 10px 0 20px
+        text-overflow: hidden
+      .article_item--bottom
+        padding-top: 13px
 
   &.howWork_section
     position: relative
     overflow: visible
-    height: 1334px
+    padding-bottom: 65px
+    padding-top: 57px
+    // height: 1334px
     background: #64BC2A url('../img/line.png') no-repeat center
+    .howWork_section--bg
+      position: absolute
+      background: url(../img/element.svg) no-repeat top center;
+      position: absolute;
+      transform: rotate(90deg) translateX(-50%)
+      top: 52%
+      left: -220px
+      display: block;
+      width: 650px;
+      height: 418px;
+      opacity: .4;
+    a.btn.btn_center
+      margin-top: 0
     &::before
       content: ""
       width: 0
@@ -1982,11 +2060,19 @@ section.main_section
       left: 0
 
   &.proposition
-    padding-top: 150px
+    padding-top: 225px
+    a.btn.btn_center
+      margin-top: 104px
+      margin-bottom: 92px
     .text
       margin-bottom: 0
     .text_row
       margin-top: 65px
+      margin-bottom: 0
+      .data-text
+        padding-top: 0
+      .data-img
+        max-width: 621px
 
 .form_popup
   .form_row
@@ -1998,6 +2084,19 @@ section.main_section
       display: block
       &:focus
         outline: none
+
+.reviews_section
+  .reviews_item 
+    margin-bottom: 122px
+    .reviews_item--text
+      font-size: 22px
+      opacity: .7
+      color: #3E3F43
+      margin-bottom: 10px
+  .reviews_item .reviews_item--name
+    font-size: 36px
+    margin-bottom: 27px
+
 
 // popup forms
 .form_popup
