@@ -205,9 +205,22 @@ nav.header_nav
 				font-size: 18px
 				color: rgba(62,63,67, .5)
 
+  
+.text_box--price a.btn
+  color: #fff
+
 footer
 	min-height: 346px
 	background-color: #24324A
+
+.product_wrap--slide .thumb_photos 
+  width: 23.4355%
+  margin-top: -7.5px
+  // margin-bottom: -7.5px
+  .thumb_item
+    margin: 7.5px 0
+    width: 150px !important
+    height: 150px !important
 
 .product_wrap
     background: url('../img/decor.svg') no-repeat  right 65px
@@ -360,6 +373,9 @@ footer
   background: #56ca0a
   text-decoration: none
   color: #fff
+  cursor: pointer
+.text_box--price .btn:hover
+  color: #fff !important
 .btn:focus
   color: #fff
   background: #4AB107
@@ -428,6 +444,11 @@ footer
     line-height: 1
     display: inline-block
 
+.empty_basket
+  background-position: bottom center
+  padding-bottom: 203px
+  .icon
+    margin-bottom: 38px
 
 .more_prod
   .title
@@ -480,11 +501,12 @@ footer
       background: url('../img/new_label.png') no-repeat
   .prod_card--desc
     .name
-      height: 44px
+      height: 66px
       overflow: hidden
       margin-bottom: 16px
       text-align: center
-      font-weight: 500;
+      font-weight: 700;
+      font-family: Montserrat
       font-size: 22px;
       line-height: 1
     .desc
@@ -512,6 +534,7 @@ footer
       margin-right: auto;
       width: auto
       cursor: pointer
+      max-width: 194px
 
   &.catalog_card
     position: relative
@@ -655,6 +678,7 @@ footer
 
 .store_wrap, .basket_wrap
   position: relative
+  overflow: hidden
   &::before
     content: ""
     background: url(../img/decor.svg) no-repeat
@@ -665,9 +689,12 @@ footer
     position: absolute
     right: -81px
     top: 50%
+    z-index: -1
 .text
   margin-bottom: 92px
-  p
+  ol
+    margin-bottom: 2rem
+  p, li
     font-family: $text3
     font-size: 18px
     line-height: 150%
@@ -1362,6 +1389,12 @@ article .topSlider_item--bottom
       top: 8px
       background: url('../img/views_icon-b.svg') no-repeat
 
+.about_content
+  .text
+    margin-bottom: 32px
+
+.article_item.slick-slide
+  height: 322px
 
 .article_item
   background-position: center top
@@ -1408,7 +1441,7 @@ article .topSlider_item--bottom
     line-height: 1.2
   .article_item--bottom
     padding-top: 21px
-    border-top: 1px solid #FFFFFF
+    border-top: 1px solid rgba(196,196,196,.3)
     position: absolute;
     width: calc(100% - 92px);
     bottom: 25px;
@@ -1499,9 +1532,21 @@ article
         font-family: $text-font
         margin-bottom: 22px
 
+.blog_wrap
+  position: relative
+  &::before
+    content: ""
+    background: url(../img/decor.svg) no-repeat
+    background-size: contain
+    transform: translateY(-50%)
+    width: 335px
+    height: 650px
+    position: absolute
+    right: 0
+    top: 50%
 
 .reviews_wrap
-  padding-bottom: 80px
+  padding-bottom: 46px
   position: relative
   overflow: hidden
   &::before
@@ -1517,6 +1562,27 @@ article
   .title
     margin-bottom: 132px
 
+
+.photo_slider-item:hover
+  position: relative
+  &::before
+    content: ""
+    max-width: 277px
+    height: 90%
+    max-height: 270px
+    filter: blur(20px)
+    width: 90%
+    top: initial
+    bottom: 60px
+    opacity: .5
+    background: url(../img/shadow-aaparats.svg) center no-repeat;
+    background-size: contain;
+    display: block
+    position: absolute
+    z-index: -1
+    left: 50%
+    transform: translateX(-50%)
+
 .reviews_item
   background: #FFFFFF
   border: 1px solid #E9E9E9
@@ -1525,10 +1591,11 @@ article
   padding: 0 65px 25px
   margin-bottom: 132px
   &.shadow-img::after
-    max-width: 604px
-    filter: blur(60px)
+    max-width: 768px
+    filter: blur(40px)
     width: 90%
-    top: 20%
+    top: initial
+    bottom: 2%
   .reviews_item--img
     margin-top: -71px
     margin-bottom: 21px
@@ -1572,7 +1639,9 @@ article
     color: #3E3F43
     font-weight: bold
 
-
+.reviews_wrap
+  .reviews_item
+    margin-bottom: 80px
 
 .contacts_wrap
   padding-bottom: 122px
@@ -1693,17 +1762,27 @@ article
 
 a.btn.btn_center
   display: block
-  width: 266px
   margin: 67px auto 0
   padding-left: 0
   padding-right: 0
+  width: max-content
+  &::before
+    content: ""
+    width: 60px
+    display: inline-block
+  &::after
+    content: ""
+    width: 60px
+    display: inline-block
+
 
 
 a.download
   font-family: $text-font
   font-size: 18px
   line-height: 1
-  color: #3E3F4380
+  color: #3E3F43
+  opacity: .8
   text-decoration: none
   vertical-align: middle
   &:before
@@ -1821,12 +1900,15 @@ section.main_section
       padding-bottom: 0
       padding-top: 0
       background: none
+      margin-top: -80px
   &.command_box
     position: relative
     overflow: visible
     z-index: 1
     padding-bottom: 48px
     padding-top: 51px
+    a.btn.btn_center
+      margin-top: 0
     &::after
       background-color: #f8f8f8;
       bottom: 0;
@@ -1855,7 +1937,7 @@ section.main_section
     .title
       margin-bottom: 60px
     .reviews_item
-      margin-bottom: 0
+      margin-bottom: 70px
       padding: 0 36px 40px
       .reviews_item--text
         color: #3E3F43;
@@ -1912,6 +1994,7 @@ section.main_section
     position: relative
     padding-top: 51px
     padding-bottom: 0
+    background: url('../img/decor.svg') no-repeat 100% 75%
     z-index: 1
     &::after
       background-color: #f8f8f8;
@@ -2056,7 +2139,6 @@ section.main_section
     .main_text
       display: flex
       flex-direction: column
-      max-width: 50%
       padding-top: 56px
       h1
         font-size: 58px
@@ -2067,7 +2149,8 @@ section.main_section
         font-weight: normal
         font-size: 22px
         line-height: 1
-        color: #3E3F4380
+        color: #3e3f43
+        opacity: .8
         margin: 28px 0 39px
 
       a
@@ -2080,6 +2163,8 @@ section.main_section
           margin-top: 24px
   &.article_list
     padding-top: 191px
+    .article_item::before
+      background: rgba(62, 63, 67, 0.47);
     .slider_wrap 
       margin-bottom: 52px
     .article_item 
@@ -2087,8 +2172,9 @@ section.main_section
       padding-right: 42px
       border-radius: 25px
       height: 322px
+      margin-bottom: 80px
       &::after
-        top: 20%
+        top: 40%
       p
         height: 133px
         margin: 10px 0 20px
@@ -2144,6 +2230,7 @@ section.main_section
   &.proposition
     padding-top: 225px
     a.btn.btn_center
+      // width: 334px
       margin-top: 104px
       margin-bottom: 92px
     .text
@@ -2244,6 +2331,9 @@ section.main_section
     right: -83px
     top: 91px;
 
+.slick-slide
+  height: auto
+
 .article_slider
   .slick-slide
     margin: 0 20px
@@ -2257,11 +2347,111 @@ section.main_section
 #map
   border-radius: 25px
 
+.top_slider
+  display: flex
+  justify-content: flex-end
+  &.shadow-img::after
+    top: 50%
+    z-index: 1
+  .slick-list
+    z-index: 2
+  .slick-arrow
+    top: initial
+    bottom: 0
+    left: 50%
+    right: initial
+    z-index: 3
+    &.slick-prev
+      margin-left: -48px
+    &.slick-next
+      margin-right: -42px
+  .top_slider--item
+    display: none
+    position: relative
+    z-index: 2
+    max-width: 667px
+    margin: 0 15px
+    padding-bottom: 60px
+    &.slick-slide
+      display: block
+    img
+      border-radius: 25px
+      position: relative
+      z-index: 2
+      max-height: 445px
+      width: 100%
+    .shadow-img::after
+      z-index: 1
+      top: 50%
+
+.text_row.text_row--inverse .data-img span 
+  img
+    position: relative
+    z-index: 2
+  &::after
+    z-index: 1
+
+section.main_section.howWork_section a.btn.btn_center
+  margin-bottom: 25px
+
+.more_prod 
+  .article_slider
+    margin-bottom: 0
+    .article_item
+      margin-bottom: 70px
+
+
+
 @media (max-width: 1509px) and (min-width: 1200px)
   .container
     max-width: 90%
 
 @media (max-width: 1440px)
+  
+
+
+  .prod_card
+    padding: 8px 35px
+  .prod_card .prod_card--desc .desc
+    height: 57px
+  .prod_card .prod_card--desc .name,
+  .prod_card--fulldesc .subname
+    font-size: 18px
+  .prod_card.catalog_card .prod_card--img
+    height: 230px
+  .prod_card--fulldesc .name
+    font-size: 18px
+  .prod_card--fulldesc p
+    font-size: 14px 
+  .more_prod .article_item
+    max-width: initial
+
+  .reviews_section .reviews_item 
+    .reviews_item--name
+      font-size: 22px
+      margin-bottom: 0
+    .reviews_item--text
+      font-size: 18px
+
+  .about_content
+    .text p
+      font-size: 14px
+    .text_row
+      margin-bottom: 40px
+    .text_row div.data-img
+      margin-bottom: 0
+    .text_row:not(.text_row--inverse) div.data-text
+      padding-left: 40px
+    .text_row.text_row--inverse div.data-text
+      padding-right: 40px
+    .text_row:not div.data-text
+      h1
+        font-size: 32px
+    .text p+.text_row
+      margin-top: 40px
+
+
+  
   .text_row div.data-img
     margin-bottom: 50px
   section.main_section.reviews_section

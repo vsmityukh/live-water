@@ -32,6 +32,10 @@ $(function() {
 
 	})
 
+	$('.toggler').on('click', function(){
+		$('.header_nav ul').toggle();
+	})
+
  
 	//Ссылка плавного скролла
 	$('.a-scroll').on('click', function(e){
@@ -45,6 +49,28 @@ $(function() {
 
 
 	//slider
+
+	$('.product_wrap--slide .main_photo').slick({
+		slidesToShow: 1,
+		dots: false,
+		arrows: false,
+		asNavFor: '.thumb_photos'
+	})
+
+	$('.product_wrap--slide .thumb_photos').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.main_photo',
+		dots: false,
+		focusOnSelect: true,
+		vertical: true
+	});
+
+	$('.top_slider').slick({
+		slidesToShow: 1,
+		dots: false,
+		arrows: true,
+	})
 	$('.article_slider').slick({
 		slidesToShow: 3,
 		dots: false,
@@ -54,7 +80,7 @@ $(function() {
 			  breakpoint: 1540,
 			  settings: {
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 1
 			  }
 			},
 			{
@@ -88,7 +114,7 @@ $(function() {
 			{
 			  breakpoint: 991,
 			  settings: {
-				slidesToShow: 1,
+				slidesToShow: 2,
 				slidesToScroll: 1
 			  }
 			}
@@ -101,7 +127,7 @@ $(function() {
 		arrows: true,
 		responsive: [
 			{
-			  breakpoint: 991,
+			  breakpoint: 1440,
 			  settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2
@@ -163,6 +189,15 @@ $(function() {
 		variableWidth: true,
 		arrows: true,
 		responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerMode: false,
+					variableWidth: false
+				}
+			},
 			{
 			  breakpoint: 564,
 			  settings: {
