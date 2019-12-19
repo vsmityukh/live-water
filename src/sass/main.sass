@@ -90,58 +90,60 @@ header
 	height: 84px
 
 .top_right
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  height: 100%
+  .top_social
     display: flex
-    justify-content: flex-end
     align-items: center
-    height: 100%
-    .top_social
-        display: flex
-        align-items: center
-        .social
-            a
-                width: 16px
-                height: 16px
-                img
-                    max-width: 100%
-                    height: 16px
-            a + a
-                margin-left: 18px
-        span.devider
-            margin: 0 25px
-            width: 1px
-            height: 34px
-            background: #C4C4C4
-        .phone a
-            color: #3E3F43
-            font-weight: 500
-            font-family: $text-font
-            &::before
-                content: ""
-                background: url('../img/icon-phone.svg') no-repeat
-                display: inline-block
-                vertical-align: middle
-                margin-right: 7px
-                width: 10px
-                height: 12px
-                background-size: contain
-    .top_basket
-        margin-right: 0
-        margin-left: 99px
-        a.basket
-            position: relative
-            span
-                position: absolute
-                font-size: 12px
-                font-weight: bold
-                color: #ffffff
-                background: #64BC2A
-                border-radius: 2px
-                padding-left: 6px
-                padding-right: 3px
-                top: -3px
-                left: 10px
-            &:hover
-                text-decoration: none
+    .social
+      display: flex
+      align-items: center
+      .social_icon
+        width: 16px
+        height: 16px
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+      a + a
+        margin-left: 18px
+    span.devider
+      margin: 0 25px
+      width: 1px
+      height: 34px
+      background: #C4C4C4
+    .phone a
+      color: #3E3F43
+      font-weight: 500
+      font-family: $text-font
+      &::before
+        content: ""
+        background: url('../img/icon-phone.svg') no-repeat
+        display: inline-block
+        vertical-align: middle
+        margin-right: 7px
+        width: 10px
+        height: 12px
+        background-size: contain
+  .top_basket
+    margin-right: 0
+    margin-left: 99px
+    a.basket
+      position: relative
+      span
+        position: absolute
+        font-size: 12px
+        font-weight: bold
+        color: #ffffff
+        background: #64BC2A
+        border-radius: 2px
+        padding-left: 6px
+        padding-right: 3px
+        top: -3px
+        left: 10px
+      &:hover
+        text-decoration: none
 
 
 nav.header_nav
@@ -610,7 +612,7 @@ footer
       display: block
       position: relative
       img
-        height: 100%
+        height: auto
     a:focus
       outline: none
 
@@ -1298,7 +1300,7 @@ small.subtitle
     height: 506px
     background-size: cover
     background-repeat: no-repeat
-    h2
+    .name
       font-family: $text-font
       font-weight: bold
       font-size: 36px
@@ -2028,17 +2030,19 @@ section.main_section
         max-width: 912px
         margin: 0 29px
       .slick-arrow
-        z-index: 123
-        top: initial
-        bottom: 0px
-        left: 50%
-        right: initial
-        transform: translateX(-50%)
-        &.slick-prev
-          margin-left: -22.5px
-          transform: translateX(-50%) rotate(180deg)
-        &.slick-next
-          margin-left: 22.5px
+        top: -40px
+      // .slick-arrow
+      //   z-index: 123
+      //   top: initial
+      //   bottom: 0px
+      //   left: 50%
+      //   right: initial
+      //   transform: translateX(-50%)
+      //   &.slick-prev
+      //     margin-left: -22.5px
+      //     transform: translateX(-50%) rotate(180deg)
+      //   &.slick-next
+      //     margin-left: 22.5px
 
 
     .photo_slider
@@ -2140,7 +2144,7 @@ section.main_section
       display: flex
       flex-direction: column
       padding-top: 56px
-      h1
+      .title
         font-size: 58px
         line-height: 1
       small
@@ -2186,7 +2190,7 @@ section.main_section
     position: relative
     overflow: visible
     padding-bottom: 65px
-    padding-top: 57px
+    padding-top: 87px
     // height: 1334px
     background: #64BC2A url('../img/line.png') no-repeat center
     .howWork_section--bg
@@ -2272,7 +2276,7 @@ section.main_section
 	display: none
 	max-width: 443px !important
 	.form_popup--text
-		h3
+		p
 			display: flex
 			align-items: center
 			justify-content: center
@@ -2317,6 +2321,8 @@ section.main_section
     left: -83px
     top: 483px;
     transform: rotate(180deg)
+  .prod_card .prod_card--img img
+    max-height: 100%
 
 .contacts_wrap
   position: relative
@@ -2405,11 +2411,16 @@ section.main_section.howWork_section a.btn.btn_center
 @media (max-width: 1509px) and (min-width: 1200px)
   .container
     max-width: 90%
-
+  .proposition
+    .text_row div.data-text
+      padding-left: 40px
 @media (max-width: 1440px)
-  
-
-
+  section.main_section.reviews_section .photo_slider .photo_slider-item:hover
+    margin-bottom: -85px
+    img
+      zoom: 1
+  .steps_wrap .step_item small
+    font-size: 16px
   .prod_card
     padding: 8px 35px
   .prod_card .prod_card--desc .desc
@@ -2461,7 +2472,7 @@ section.main_section.howWork_section a.btn.btn_center
   .why_section
     a.btn.btn_center
       margin-bottom: 40px
-  section.main_section.main_screen .main_text h1
+  section.main_section.main_screen .main_text .title
     font-size: 36px
   section.main_section.main_screen .main_text small
     font-size: 18px
