@@ -1085,10 +1085,24 @@
                 padding-right: 7px
             &>div:nth-child(even)
                 padding-left: 7px
-
+    section.main_section.reviews_section
+        .review_slider
+            .slick-arrow
+                top: -20px
+                bottom: initial
+                left: initial
+                right: 18px
+                transform: none
+                &.slick-prev
+                    margin-left: 0
+                    right: 45px
+                    transform: rotate(180deg)
+                &.slick-next
+                    margin-left: 0
 
 // ≥576px
 +media-breakpoint-down(xs)
+    
     .gallery_slider .gallery_item a
         height: auto
     .form_radio input:checked+label::after
