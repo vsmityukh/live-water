@@ -61,6 +61,7 @@ $(function() {
 		slidesToScroll: 1,
 		asNavFor: '.main_photo',
 		dots: false,
+		arrows: false,
 		focusOnSelect: true,
 		vertical: true
 	});
