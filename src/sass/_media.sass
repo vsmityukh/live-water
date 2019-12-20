@@ -234,13 +234,16 @@
         .top_right
             padding: 0 22px
 
-    .top_right .top_social .social a+a
-        margin-left: 10px
-        height: 13px
-        width: 13px
-        display: inline-block;
+    .top_right .top_social .social a
+        &+a
+            margin-left: 10px
+            height: 13px
+            width: 13px
+            display: flex;
         img
+            display: block
             max-width: 100%
+
     .top_right .top_social 
         justify-content: space-between
         width: 100%
