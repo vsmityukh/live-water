@@ -5,6 +5,29 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+    .product_wrap--slide .thumb_photos .thumb_item
+        width: 130px!important;
+    .product_wrap .prod_top
+        margin-bottom: 82px
+        .text_box
+            padding-top: 20px
+    
+    .product_wrap--slide
+        .photo_box
+            a.more3d
+                white-space: nowrap
+            .main_photo--wrapper
+                padding: 10%
+                max-height: 421px
+                width: 70%
+                display: flex;
+                align-items: center;
+            .thumb_photos
+                width: 30%  
+            .thumb_item
+                height: 130px !important
+
+
     footer .f_top .f_top--feedback
         margin-top: 16px
     footer .f_top .f_top--cards .cards_wrap
@@ -378,6 +401,8 @@
     .product_wrap 
         .photo_box .main_photo
             height: 370px
+            display: flex
+            align-items: center
     .blog_wrap
         position: relative
         &::before
@@ -1180,9 +1205,18 @@
                     padding-right: 4px
                 .col-6:nth-child(even)
                     padding-left: 4px
-
+    .product_wrap--slide .photo_box 
+        a.more3d
+            bottom: 0
+        .main_photo--wrapper
+            width: 70%
+            height: 205px
+            overflow: hidden;
+        .thumb_photos
+            width: 25%
+            height: 205px
     .product_wrap 
-        .photo_box .main_photo, .thumb_photos
+        .photo_box .main_photo
             height: 205px
         .text_box h1
             margin-bottom: 14px
@@ -1409,10 +1443,11 @@
         height: 65px !important
         width: 65px !important
         border-radius: 14px
+        padding: 5%
     .product_wrap--slide .thumb_photos 
-        margin-top: -3px
+        margin-top: 0
         .thumb_item
-            margin: 3px 0
+            margin: 2px 0
     .product_wrap .photo_box .main_photo
         overflow: hidden
         padding: 0
