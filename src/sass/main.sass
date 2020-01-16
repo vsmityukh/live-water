@@ -211,6 +211,28 @@ nav.header_nav
 .text_box--price a.btn
   color: #fff
 
+.text_box--price
+  .inputs
+    width: 245px
+    background: #FFFFFF
+    border: 1px solid #E9E9E9
+    box-sizing: border-box
+    border-radius: 10px
+    div
+      display: flex
+      justify-content: space-between
+      padding: 8px 22px
+      & + div
+        border-top: 1px solid #E9E9E9
+      span
+        font-weight: 500
+        font-size: 16px
+        & + span
+          color: #64BC2A
+          span
+            color: rgba(62, 63, 67, 0.6);
+      
+
 footer
 	min-height: 346px
 	background-color: #24324A
@@ -326,6 +348,7 @@ footer
   .text_box--price
     display: flex
     justify-content: space-between
+    align-items: center
 .price
 	color: #64BC2A
 	font-family: $text-font
@@ -609,7 +632,7 @@ footer
       display: block
       position: relative
       img
-        height: auto
+        height: 100%
     a:focus
       outline: none
 
@@ -1581,6 +1604,7 @@ article
     z-index: -1
     left: 50%
     transform: translateX(-50%)
+  
 
 .reviews_item
   background: #FFFFFF
@@ -2046,6 +2070,7 @@ section.main_section
         margin: 0 3px
         padding-top: 20px
         padding-bottom: 40px;
+        
         &:hover
           position: relative
           z-index: 123
@@ -2065,7 +2090,8 @@ section.main_section
             top: 50%
             transform: translate(-50%, -50%)
             margin-top: -50px
-
+          &.photo_slider-item--video::after
+            background: url(../img/video-arrow-b.svg) center no-repeat;
           img
             margin-left: -10%
             margin-top: -10%
@@ -2372,7 +2398,8 @@ section.main_section
     z-index: 2
     max-width: 667px
     margin: 0 15px
-    padding-bottom: 60px
+    // padding-bottom: 60px
+    margin-bottom: 60px
     &.slick-slide
       display: block
     img
@@ -2401,6 +2428,15 @@ section.main_section.howWork_section a.btn.btn_center
     .article_item
       margin-bottom: 70px
  
+.product_wrap.product_main
+  .prod_top
+    .main_photo
+      background: #FFFFFF;
+      border: 1px solid #E9E9E9;
+      box-sizing: border-box;
+      border-radius: 25px;
+      height: 440px
+      padding: 15% 10%
 
 .photo_box 
   position: relative
@@ -2436,6 +2472,65 @@ section.main_section.howWork_section a.btn.btn_center
       margin-right: 14px;
       vertical-align: middle
       background: url(../img/icon-view-grey.svg) no-repeat;
+
+
+.gallery_row
+  h2
+    font-size: 36px
+    margin-bottom: 51px
+
+  .gallery_item
+    margin-bottom: 36px
+    a
+      img
+        position: relative
+        z-index: 2
+      &::after
+        z-index: 0
+
+.gallery_item--video
+  a
+    &::before
+      content: ""
+      position: absolute
+      z-index: 3
+      background: rgba(64, 83, 111, 0.3)  url('../img/video-arrow.svg') no-repeat center
+      background-size: 108px 108px
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      border-radius: 25px
+  a:hover
+    &::before
+      background: rgba(64, 83, 111, 0.6) url('../img/video-arrow.svg') no-repeat center
+      background-size: 108px 108px
+
+
+.text_box--price .btns
+  width: 245px
+  a.btn
+    display: block
+  .count
+    margin-bottom: 28px
+    display: flex
+    justify-content: space-between
+    & > span
+      color: rgba(62,63,67,.6)
+      font-weight: 500;
+      font-size: 18px;
+    .change_row
+      display: flex
+      align-items: center
+      span.value
+        color: rgba(62,63,67,.6)
+        margin: 0 22px
+        color: #3E3F43
+        font-size: 22px
+        line-height: 27px
+        font-weight: 500
+
+
 
 
 @media (max-width: 1509px) and (min-width: 1200px)

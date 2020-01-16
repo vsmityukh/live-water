@@ -5,6 +5,13 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+    .text_box--price .inputs
+        width: 200px
+    .product_wrap.product_main
+        .prod_top
+            .main_photo
+                height: 270px
+                padding: 10% 5%
     .product_wrap--slide .thumb_photos .thumb_item
         width: 130px!important;
     .product_wrap .prod_top
@@ -46,7 +53,8 @@
     section.main_section.main_screen .main_text small
         font-size: 20px
     .top_slider .top_slider--item
-        padding-bottom: 110px
+        // padding-bottom: 110px
+        margin-bottom: 110px
     .top_slider .slick-arrow
         bottom: 30px
 
@@ -62,6 +70,18 @@
         font-size: 16px
    
 @media (max-width: 1190px)
+    .text_box .text_box--price
+        flex-wrap: wrap
+    .text_box--price .btns
+        display: flex
+        width: 100%
+        align-items: center
+        justify-content: space-between
+        margin-top: 15px
+        .count
+            margin-bottom: 0
+            &>span
+                margin-right: 20px
     .text_row
         &>div.data-text, div.data-img
             width: 100%
@@ -111,6 +131,7 @@
         bottom: -40px
 // ≥992px
 +media-breakpoint-down(md)
+    
     .about_content
         .text_row:not(.text_row--inverse) div.data-text
             padding-left: 0
@@ -137,7 +158,10 @@
     .top_slider .slick-arrow
         bottom: 50px
     .top_slider .top_slider--item
-        padding-bottom: 50px
+        // padding-bottom: 50px
+        margin-bottom: 50px
+        .gallery_item--video a::before
+            background-size: 70px 70px
     .top_slider .top_slider--item .shadow-img::after
         top: 27%
     section.main_section.main_screen
@@ -391,6 +415,31 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+    .text_box--price .btns .count
+        flex-wrap: wrap
+    .text_box--price .btns a.btn
+        min-width: 145px
+        
+    .text_box--price .btns .count>span
+        font-size: 12px
+        margin-bottom: 6px
+    .text_box--price .inputs
+        min-width: 145px
+        width: auto
+        div 
+            padding: 8px 14px
+            span
+                font-size: 12px
+
+    .product_wrap.product_main
+        .prod_top
+            .main_photo
+                height: 215px
+                padding: 22px
+    section.main_section.article_list .slider_wrap .slick-arrow.slick-next
+        right: 0
+    section.main_section.article_list .slider_wrap .slick-arrow.slick-prev
+        right: 27px 
     .text h2
         font-size: 22px
     section.main_section.reviews_section .review_slider .slick-arrow
@@ -408,6 +457,7 @@
             align-items: center
     .blog_wrap
         position: relative
+        overflow: hidden
         &::before
             width: 190px
             height: 260px
