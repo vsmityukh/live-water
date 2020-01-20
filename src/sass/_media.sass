@@ -70,6 +70,36 @@
         font-size: 16px
    
 @media (max-width: 1190px)
+    .search_row form .fieldset
+        input
+            height: 50px
+            width: calc(100% - 46px)
+            padding: 0 14px
+        button
+            height: 50px
+            width: 46px
+            background-size: 15px 15px
+        .close
+            right: 60px
+            top: 15px
+            background-size: 8px 8px
+
+    .search_row .form_result .form_result-item img
+        height: 36px
+        margin-right: 11px
+    .search_row .form_result .form_result-item>span
+        font-size: 14px
+        width: calc(100% - 47px)
+    .search_row .form_result-wrap
+        max-height: 161px
+    .search_row .form_result .form_result-item
+        width: calc(100% - 90px)
+    .search_row .scrollbar-rail>.scroll-element.scroll-y
+        right: 8px
+        top: 8px
+
+
+
     .text_box .text_box--price
         flex-wrap: wrap
     .text_box--price .btns
@@ -1180,7 +1210,28 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
-    
+    .search_row form .fieldset
+        input
+            height: 36px
+            font-size: 12px
+            &:placeholder
+                font-size: 12px
+        button
+            height: 36px
+            
+    .search_row .form_result .form_result-item>span
+        display: block
+        font-size: 10px
+    .search_row .form_result .form_result-item 
+        padding-left: 14px
+        padding-right: 14px
+        box-sizing: border-box !important
+        width: calc(100% - 29px);
+        .price
+            text-align: left
+            font-size: 12px
+            padding-top: 5px
+
     .gallery_slider .gallery_item a
         height: auto
     .form_radio input:checked+label::after

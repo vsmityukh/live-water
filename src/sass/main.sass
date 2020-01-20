@@ -2531,7 +2531,146 @@ section.main_section.howWork_section a.btn.btn_center
         font-weight: 500
 
 
+.search_row
+  margin-bottom: 60px
+  form
+    position: relative
+    .fieldset
+      display: flex
+      position: relative
+      flex-wrap: wrap
+      &::after
+        content: "";
+        background: #000000;
+        opacity: 0.2;
+        filter: blur(30px);
+        width: 100%
+        height: 60px
+        z-index: -1
+        position: absolute;
+        top: 28px;
+      .close
+        position: absolute
+        z-index: 2
+        top: 28px
+        background: url('../img/close_icon.svg') no-repeat
+        width: 14px
+        height: 14px
+        right: 121px
+        cursor: pointer
+    input
+      display: inline-block
+      width: calc(100% - 97px)
+      height: 70px
+      background: #FFFFFF
+      border: 1px solid #E9E9E9
+      padding: 0 30px
+      color: rgba(62, 63, 67, 0.5);
+      font-size: 18px
+      line-height: 22px
+      &::placeholder
+        color: rgba(62, 63, 67, 0.5);
+    button
+      display: inline-block
+      width: 96px
+      height: 70px
+      border: none
+      background: #64BC2A url('../img/search_icon.svg') no-repeat center
+      border: 1px solid #59AC22
+      box-sizing: border-box
+      border-top-right-radius: 10px
+      border-bottom-right-radius: 10px
+      cursor: pointer 
+      &:hover
+        background-color: #56CA0A
+      &:active, &:focus
+        background-color: #4AB107
+        outline: none
+  .form_result
+    display: none
+    width: 100%
+    position: absolute
+    z-index: 2
+    top: 100%
+    height: 192px
+    .form_result-item
+      background: #f8f8f8
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 8px 30px 
+      border-left: 1px solid #E9E9E9
+      border-right: 1px solid #E9E9E9
+      border-bottom: 1px solid #E9E9E9
+      width: calc(100% - 140px)
+      &:hover
+        background: #efefef
+      &:last-child
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        
+      .price
+        font-size: 18px
+        color: #3E3F43
+        width: 200px
+        text-align: right
+      img
+        margin-right: 20px
+      &>span 
+        width: calc(100% - 68px)
+        display: flex
+        justify-content: space-between
+        color: rgba(62, 63, 67, 0.5);
+        font-size: 18px
 
+      &:hover
+        text-decoration: none 
+
+  .scrollbar-rail>.scroll-element.scroll-y
+    width: 22px
+    right: 35px
+    
+    top: 22px
+    // padding-top: 22px
+    // padding-bottom: 22px
+    overflow: hidden
+    .scroll-element_outer
+      width: 24px
+      max-height: 147px
+    .scroll-element_size
+      left: 11px
+      background: #D8D8D8
+      border-radius: 22px
+      
+    .scroll-bar
+      left: 0
+      height: 22px !important
+      width: 22px !important
+      border-radius: 50%
+      background: #64BC2A !important
+  .scrollbar-rail>.scroll-element
+    background: transparent
+    
+  .form_result-wrap
+    // border: 1px solid #E9E9E9
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    position: relative
+    max-height: 196px
+    overflow: auto
+    &::after
+      content: ""
+      background: #000000
+      opacity: 0.2
+      filter: blur(30px)
+      width: calc(100% - 140px)
+      height: 60px
+      z-index: -1
+      position: absolute
+      bottom: 2px
+    
+      
+  
 
 @media (max-width: 1509px) and (min-width: 1200px)
   .container

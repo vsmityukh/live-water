@@ -220,6 +220,14 @@ $(function() {
 			}
 		]
 	})
+
+
+	$('.js-close').on('click', function(){
+		$('#search').val('')
+	})
+
+
+	$('.form_result-wrap').scrollbar();
 });
 
 
