@@ -88,6 +88,35 @@ header
 	display: flex
 	align-items: center
 	height: 84px
+  
+.no-padd
+  padding-left: 0
+  padding-right: 0
+.header_top
+  .logo_wrap
+    display: flex
+    align-items: center
+  .slogan
+    padding-top: 10px
+    font-family: $text3
+    max-width: 207px
+    font-weight: 500
+    font-size: 16px
+    line-height: 100%
+    color: #3E3F43
+    margin-left: 22px
+    padding-left: 22px
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      left: 0
+      display: inline-block
+      vertical-align: middle
+      width: 1px
+      height: 28px
+      background: #3E3F43
+      opacity: .5
 
 .top_right
   display: flex
@@ -2650,7 +2679,7 @@ section.main_section.howWork_section a.btn.btn_center
       background: #64BC2A !important
   .scrollbar-rail>.scroll-element
     background: transparent
-    
+
   .form_result-wrap
     // border: 1px solid #E9E9E9
     border-bottom-left-radius: 10px
@@ -2669,7 +2698,14 @@ section.main_section.howWork_section a.btn.btn_center
       position: absolute
       bottom: 2px
     
-      
+
+.not_found
+  padding-top: 50px
+  .title
+    font-size: 147px
+    color: #64BC2A
+    font-weight: bold
+    margin-bottom: 29px
   
 
 @media (max-width: 1509px) and (min-width: 1200px)
