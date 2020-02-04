@@ -70,22 +70,7 @@
         font-size: 16px
    
 @media (max-width: 1190px)
-    .header_top .logo_wrap
-        display: block
-        height: 97px
-        .slogan
-            height: 30px
-            background: #ffffff
-            text-align: center
-            width: 100%
-            max-width: 100%
-            margin-left: 0
-            line-height: 30px
-            padding-top: 0
-            padding-left: 0
-            font-size: 12px
-            &:before
-                content: none
+    
     .search_row form .fieldset
         input
             height: 50px
@@ -176,8 +161,23 @@
     section.main_section.howWork_section::after
         bottom: -40px
 // ≥992px
-+media-breakpoint-down(md)
-    
++media-breakpoint-down(md) 
+    .header_top .logo_wrap
+        display: block
+        height: 97px
+        .slogan
+            height: 30px
+            background: #ffffff
+            text-align: center
+            width: 100%
+            max-width: 100%
+            margin-left: 0
+            line-height: 30px
+            padding-top: 0
+            padding-left: 0
+            font-size: 12px
+            &:before
+                content: none
     .about_content
         .text_row:not(.text_row--inverse) div.data-text
             padding-left: 0
